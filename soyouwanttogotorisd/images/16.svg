@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" overflow="visible" enable-background="new 0 0 200 200"
+	 xml:space="preserve">
+<defs>
+</defs>
+<circle fill="#FFFFFF" cx="100" cy="100" r="100"/>
+<polygon fill="#E6E7E8" points="70.9,143.099 33.826,143.099 37.858,56.386 66.868,56.386 "/>
+<polygon fill="#5FD0D6" points="67.676,73.761 66.868,56.386 37.858,56.386 37.05,73.761 "/>
+<rect x="33.826" y="143.099" fill="#5FD0D6" width="37.075" height="11.4"/>
+<rect x="52.363" y="143.099" opacity="0.1" fill="#231F20" width="18.538" height="11.4"/>
+<circle fill="#5FD0D6" cx="52.363" cy="99.742" r="9.361"/>
+<rect x="43.499" y="52.024" fill="#D1D3D4" width="17.728" height="4.361"/>
+<rect x="52.363" y="52.024" opacity="0.1" fill="#231F20" width="8.864" height="4.361"/>
+<rect x="40.441" y="45.5" fill="#E6E7E8" width="23.843" height="6.604"/>
+<rect x="52.363" y="45.5" opacity="0.1" fill="#231F20" width="11.922" height="6.604"/>
+<polygon opacity="0.1" fill="#231F20" points="70.9,143.099 66.868,56.386 52.363,56.386 52.363,143.099 "/>
+<polygon fill="#E6E7E8" points="116.717,56.9 79.643,56.9 83.675,143.613 112.685,143.613 "/>
+<polygon fill="#FFB85D" points="113.493,126.238 112.685,143.613 83.675,143.613 82.867,126.238 "/>
+<rect x="79.643" y="45.5" fill="#FFB85D" width="37.075" height="11.4"/>
+<rect x="98.18" y="45.5" opacity="0.1" fill="#231F20" width="18.538" height="11.4"/>
+<circle fill="#FFB85D" cx="98.18" cy="100.257" r="9.36"/>
+<rect x="89.315" y="143.613" fill="#D1D3D4" width="17.729" height="4.362"/>
+<rect x="98.18" y="143.613" opacity="0.1" fill="#231F20" width="8.864" height="4.362"/>
+<rect x="86.258" y="147.896" fill="#E6E7E8" width="23.843" height="6.604"/>
+<rect x="98.18" y="147.896" opacity="0.1" fill="#231F20" width="11.922" height="6.604"/>
+<polygon opacity="0.1" fill="#231F20" points="116.717,56.9 112.685,143.613 98.18,143.613 98.18,56.9 "/>
+<polygon fill="#E6E7E8" points="162.534,143.099 125.459,143.099 129.492,56.386 158.501,56.386 "/>
+<polygon fill="#FC7C9F" points="159.31,73.761 158.501,56.386 129.492,56.386 128.684,73.761 "/>
+<rect x="125.459" y="143.099" fill="#FC7C9F" width="37.075" height="11.4"/>
+<rect x="143.997" y="143.099" opacity="0.1" fill="#231F20" width="18.538" height="11.4"/>
+<circle fill="#FC7C9F" cx="143.997" cy="99.742" r="9.361"/>
+<rect x="135.132" y="52.024" fill="#D1D3D4" width="17.728" height="4.361"/>
+<rect x="143.997" y="52.024" opacity="0.1" fill="#231F20" width="8.864" height="4.361"/>
+<rect x="132.075" y="45.5" fill="#E6E7E8" width="23.843" height="6.604"/>
+<rect x="143.997" y="45.5" opacity="0.1" fill="#231F20" width="11.922" height="6.604"/>
+<polygon opacity="0.1" fill="#231F20" points="162.534,143.099 158.501,56.386 143.997,56.386 143.997,143.099 "/>
+</svg>

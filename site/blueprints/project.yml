@@ -1,0 +1,40 @@
+title: Project
+
+fields:
+  title:
+    label: Title
+    type:  text
+    width: 3/4
+
+  year:
+    label: Year
+    type:  text
+    width: 1/4
+
+  text:
+    label: Text
+    type:  textarea
+
+files:
+  sortable: true
+  fields:
+    class:
+      label: class
+      type: text
+    frontclass:
+      label: frontclass
+      type: text
+    featured:
+      label: featured
+      type: checkbox
+      text: feature on front page?
+    caption:
+      label: caption
+      type: text
+    what:
+      label: what
+      type: text
+      
+pages: false
+
+

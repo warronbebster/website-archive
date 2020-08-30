@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" overflow="visible" enable-background="new 0 0 200 200"
+	 xml:space="preserve">
+<defs>
+</defs>
+<circle fill="#FFFFFF" cx="100" cy="100" r="100"/>
+<rect x="53.33" y="80.564" fill="#64E2E2" width="93.173" height="85.391"/>
+<polygon fill="#FFA245" points="153.234,80.564 46.6,80.564 55.02,36.291 144.814,36.291 "/>
+<polygon fill="#4ABCB9" points="111.568,129.358 88.266,129.358 90.105,119.683 109.729,119.683 "/>
+<polygon fill="#4ABCB9" points="127.907,129.358 116.391,129.358 118.23,119.683 126.067,119.683 "/>
+<polygon fill="#4ABCB9" points="141.074,129.358 129.558,129.358 131.398,119.683 139.234,119.683 "/>
+<polygon fill="#4ABCB9" points="141.074,95.292 129.558,95.292 131.398,85.618 139.234,85.618 "/>
+<polygon fill="#4ABCB9" points="127.907,95.292 116.392,95.292 118.231,85.618 126.067,85.618 "/>
+<polygon fill="#4ABCB9" points="83.443,95.292 71.927,95.292 73.767,85.618 81.604,85.618 "/>
+<polygon fill="#4ABCB9" points="70.275,95.292 58.759,95.292 60.6,85.618 68.436,85.618 "/>
+<polygon fill="#4ABCB9" points="83.443,129.358 71.927,129.358 73.767,119.683 81.604,119.683 "/>
+<polygon fill="#4ABCB9" points="70.275,129.358 58.759,129.358 60.6,119.683 68.436,119.683 "/>
+<circle fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="100.302" cy="58.427" r="16.979"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="100.303" y1="41.449" x2="100.303" y2="75.406"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="100.303" y1="58.427" x2="112.281" y2="70.406"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="100.303" y1="58.427" x2="88.324" y2="70.406"/>
+<polygon fill="#FFFFFF" points="112.221,161.047 112.221,156.14 88.383,156.14 88.383,161.047 83.323,161.047 83.323,166.956 
+	117.281,166.956 117.281,161.047 "/>
+<rect x="60.065" y="129.358" fill="#FFFFFF" width="8.904" height="17.1"/>
+<rect x="73.233" y="129.358" fill="#FFFFFF" width="8.903" height="17.1"/>
+<rect x="117.697" y="129.358" fill="#FFFFFF" width="8.903" height="17.1"/>
+<rect x="91.75" y="129.358" fill="#FFB85D" width="17.106" height="26.781"/>
+<polygon fill="#4ABCB9" points="111.594,95.263 88.292,95.263 90.132,85.588 109.755,85.588 "/>
+<rect x="91.775" y="95.263" fill="#FA8DB8" width="17.106" height="17.129"/>
+<rect x="130.864" y="129.358" fill="#FA8DB8" width="8.904" height="17.1"/>
+<rect x="60.065" y="95.292" fill="#FA8DB8" width="8.904" height="17.1"/>
+<rect x="73.233" y="95.292" fill="#FFFFFF" width="8.903" height="17.1"/>
+<rect x="117.697" y="95.292" fill="#FFFFFF" width="8.903" height="17.1"/>
+<rect x="130.864" y="95.292" fill="#FFFFFF" width="8.904" height="17.1"/>
+<rect x="94.313" y="131.882" fill="#FFFFFF" width="11.979" height="8.623"/>
+<rect x="104.369" y="142.749" fill="#FFFFFF" width="1.923" height="3.576"/>
+<rect x="53.33" y="80.564" opacity="0.1" fill="#231F20" width="93.173" height="7.01"/>
+</svg>

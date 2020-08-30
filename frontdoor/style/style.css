@@ -1,0 +1,705 @@
+@font-face {
+    font-family: 'Mono';
+    src: url(../fonts/RepMo.otf);
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+textarea,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*END RESET*/
+
+
+/*END RESET*/
+
+
+/*END RESET*/
+
+
+/*END RESET*/
+
+
+/*END RESET*/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    padding: 0;
+    font-size: 20px;
+    overflow-x: hidden;
+    font-family: 'mono';
+    background: #ff786e;
+    color: #222;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ff786e;
+    transition: .2s;
+}
+
+a:hover {
+    color: #69eb7B;
+    transition: .2s;
+}
+
+
+/*TOP HEADERS-SVGS*/
+
+#headers {
+    position: fixed;
+    z-index: 500;
+}
+
+.header {
+    height: 60px;
+    float: left;
+    top: 0;
+    position: relative;
+    font-size: 14px;
+}
+
+#cipherType {
+    width: 12.5vw;
+    background: #222;
+}
+
+#cipherSee {
+    width: 50vw;
+    background: #ff786e;
+}
+
+#demoType {
+    width: 50vw;
+    background: #222;
+}
+
+#demoSee {
+    width: 37.5vw;
+    background: #ff786e;
+}
+
+svg,
+img {
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.top {
+    position: relative;
+    z-index: 500;
+}
+
+#cipherType svg path {
+    fill: #222;
+}
+
+#cipherSee svg path {
+    fill: white;
+}
+
+#demoType svg path {
+    fill: white;
+}
+
+#demoSee svg path {
+    fill: #ff786e;
+}
+
+#keyboard:hover path {
+    fill: white;
+}
+
+.hoverText {
+    position: absolute;
+    /*background: rgba(0,255,0,.5);*/
+    opacity: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    transition: .3s;
+    cursor: help;
+}
+
+.vert {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.hoverText1 {
+    color: #222;
+    opacity: 1;
+    background: #ff786e;
+    transition: .3s;
+}
+
+#hoverText2 {
+    color: white;
+}
+
+.hoverText2 {
+    color: white;
+    opacity: 1;
+    background: #ff786e;
+    transition: .3s;
+}
+
+#hoverText3 {
+    color: white;
+}
+
+.hoverText3 {
+    color: white;
+    opacity: 1;
+    background: #222;
+    transition: .3s;
+}
+
+.hoverText4 {
+    color: #ff786e;
+    opacity: 1;
+    background: #222;
+    transition: .3s;
+}
+
+
+/* WHOLE CIPHER INTERFACE*/
+
+#cipher-interface {
+    width: 100vw;
+    min-height: 30px;
+    background: #ff786e;
+}
+
+#cipher *::selection {
+    background: #222;
+    /* WebKit/Blink Browsers */
+    color: white;
+}
+
+#cipher *::-moz-selection {
+    background: #222;
+    /* Gecko Browsers */
+    color: white;
+}
+
+
+/*THE DEMO */
+
+.demo {
+    line-height: 25px;
+}
+
+.demo *::selection {
+    background: rgba(255, 255, 255, 1);
+    /* WebKit/Blink Browsers */
+    color: white;
+}
+
+.demo *::-moz-selection {
+    background: rgba(255, 255, 255, 1);
+    /* Gecko Browsers */
+    color: white;
+}
+
+#input-text {
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    width: 37.5vw;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+#input-text:focus {
+    outline: none;
+    color: #69eb7B;
+}
+
+#output-text {
+    position: fixed;
+    color: #222;
+    padding: 10px 20px;
+    top: 60px;
+    right: 0px;
+    height: 100vh;
+    width: 37.5vw;
+    background: #ff786e;
+    hyphens: auto;
+}
+
+
+/*LEFT SIDE-CIPHER INTERFACE*/
+
+.pair {
+    clear: both;
+}
+
+#cipher {
+    padding-top: 40px;
+    /*    position: relative;
+    left: 37.5vw*/
+    margin: 0 auto;
+    width: 25vw;
+    position: relative;
+    z-index: 999;
+}
+
+.arrow {
+    z-index: 10;
+    height: 15px;
+    position: absolute;
+    left: calc(12.5vw - 10px);
+    top: 12px;
+}
+
+.arrow path {
+    fill: white;
+}
+
+.pair {
+    position: relative;
+}
+
+.digital {
+    background: #222;
+    width: 12.5vw;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    color: #FF786E;
+}
+
+.visual {
+    background: #ff786e;
+    color: white;
+    width: 12.5vw;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.visual:focus {
+    outline: none;
+    color: #69eb7B;
+}
+
+.visual:hover {
+    color: #222;
+}
+
+
+/*BOTTOM MENU*/
+
+
+/*BOTTOM MENU*/
+
+
+/*BOTTOM MENU*/
+
+#options {
+    position: fixed;
+    bottom: -300px;
+    width: 100vw;
+    background: white;
+    z-index: 999;
+}
+
+.lowerHalf {
+    height: 60px;
+    line-height: 60px;
+}
+
+#options li {
+    /*border: 1px solid #222;*/
+    float: left;
+    height: 120px;
+    position: relative;
+    bottom: 0px;
+    width: 12.5vw;
+    padding: 0 10px;
+    /*display: inline block;*/
+    text-align: center;
+    transition: bottom .2s;
+    color: #222;
+    font-size: 14px;
+}
+
+#options li:hover {
+    bottom: 60px;
+    transition: bottom .2s;
+    cursor: pointer;
+    background: #222;
+}
+
+#options li:nth-child(even) {
+    background: #69EB7B;
+    color: white;
+    transition: .2s;
+}
+
+#options li:nth-child(even):hover {
+    background: #222;
+    transition: .2s;
+}
+
+#options li:nth-child(odd) {
+    background: white;
+    color: #69eb7B;
+    transition: .2s;
+}
+
+#options li:nth-child(odd):hover {
+    background: #222;
+    transition: .2s;
+}
+
+#options #presets {
+    bottom: 0px;
+    height: 360px;
+    transition: bottom .2s;
+}
+
+#options #presets:hover {
+    bottom: 300px;
+    transition: bottom .2s;
+    cursor: pointer;
+    background: #222;
+}
+
+.preset {
+    height: 60px;
+    line-height: 60px;
+    transition: .2s;
+    margin: 0 -10px;
+    color: white;
+}
+
+.preset:hover {
+    background: white;
+    transition: .2s;
+    color: #222;
+}
+
+
+/*ABOUT pOPUP*/
+
+.aboutItem {
+    position: fixed;
+    background: white;
+    border: 2px solid #222;
+    z-index: 20000;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 18px;
+    transition: bottom .4s, color .2s, background .2s;
+}
+
+#aboutText {
+    bottom: 375px;
+    width: 50vw;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#exit {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background: white;
+    border: 2px solid #222;
+    text-align: center;
+}
+
+#exit svg {
+    position: relative;
+    bottom: 11px;
+}
+
+#exit:hover {
+    background: #222;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#lookCipher {
+    bottom: 250px;
+    width: 200px;
+    height: 75px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#lookCipher span {
+    position: relative;
+    top: 10px;
+}
+
+#lookCipher svg {
+    position: absolute;
+    right: -15px;
+    top: -40px;
+}
+
+#lookDemos {
+    bottom: 175px;
+    width: 80vw;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#leftAlign {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+}
+
+#leftUp {
+    position: absolute;
+    bottom: -15px;
+    left: -5px;
+}
+
+#rightAlign {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+#rightUp {
+    position: absolute;
+    bottom: -15px;
+    right: -5px;
+}
+
+#lookDemos svg {
+    height: 260px;
+}
+
+#lookMenu {
+    bottom: 75px;
+    height: 75px;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#lookMenu svg {
+    position: absolute;
+    height: 180px;
+    left: -20px;
+    top: -20px;
+}
+
+.aboutSvg {
+    width: 30px;
+}
+
+.aboutHover {
+    background: #222;
+    color: white;
+    border-color: white;
+}
+
+.aboutToggle {
+    bottom: -200px !important;
+}
+
+
+/*HIDDEN ELEMENTS*/
+
+input[type=file] {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: fixed;
+    bottom: -80px;
+    left: -200px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#typed-strings {
+    position: fixed;
+    bottom: -300px;
+    left: -300px;
+}

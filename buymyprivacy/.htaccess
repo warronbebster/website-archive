@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^buymyprivacy\.barronwebster\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.buymyprivacy\.barronwebster\.com$
+RewriteRule ^/?$ "http\:\/\/buymyprivacy\.com" [R=301,L]
+

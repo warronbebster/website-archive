@@ -1,0 +1,17 @@
+Class: big
+
+----
+
+Caption: 
+
+----
+
+Sort: 23
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0

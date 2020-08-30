@@ -1,0 +1,25 @@
+Class: big
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0
+
+----
+
+Caption: ⤷ A series of booklets for Design & Fiction, an exhibition in the winter of 2016.
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 1

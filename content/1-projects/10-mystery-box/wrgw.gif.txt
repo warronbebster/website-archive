@@ -1,0 +1,25 @@
+Class: border big
+
+----
+
+Frontclass: border
+
+----
+
+Featured: 1
+
+----
+
+Caption: ⤷ Logo & animation for WRGW radio
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 1

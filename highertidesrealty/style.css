@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+/*         */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    overflow-x: hidden;
+}
+#bg {
+    background-image: url('img/PIC1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(37, 137, 237, .4);
+    width: 100%;
+    height: calc(600px + 20vw);
+    transition: .5s;
+    background-image: linear-gradient(to bottom, rgba(237, 137, 237, .3), rgba(37, 137, 237, .3)), url("img/PIC1.jpg");
+    background-image: -moz-linear-gradient(top, rgba(37, 137, 237, .3), rgba(37, 137, 237, .3)), url("img/PIC1.jpg");
+    background-image: -o-linear-gradient(top, rgba(37, 137, 237, .3), rgba(37, 137, 237, .3)), url("img/PIC1.jpg");
+    background-image: -ms-linear-gradient(top, rgba(37, 137, 237, .3), rgba(37, 137, 237, .3)), url("img/PIC1.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 137, 237, .3)), to(rgba(37, 137, 237, .3))), url("img/PIC1.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(37, 137, 237, .3), rgba(37, 137, 237, .3)), url("img/PIC1.jpg");
+}
+#title {
+    position: fixed;
+    background: white;
+    padding: .65em .5em .5em .5em;
+    left: 2rem;
+    top: 2rem;
+    color: #00ccff;
+    font-size: 1.6rem;
+    z-index: 5;
+    box-shadow: 5px 5px 5px rgba(37, 137, 237, .2);
+    transition: box-shadow .2s;
+    border-radius: 3px;
+    border: 1px solid rgba(37, 137, 237, .2);
+}
+#menu {
+    position: fixed;
+    background: white;
+    padding: .3em .4em .3em .4em;
+    right: 2rem;
+    top: 2rem;
+    transition: box-shadow .2s, border .2s;
+    box-shadow: 5px 5px 5px rgba(37, 137, 237, .2);
+    z-index: 5;
+    border-radius: 3px;
+    border: 1px solid rgba(37, 137, 237, .2);
+}
+#menu:hover, #title:hover {
+    box-shadow: 5px 5px 5px rgba(37, 137, 237, .7);
+    border: 1px solid rgba(37, 137, 237, .7);
+    transition: box-shadow .2s, border .2s;
+}
+#menu li {
+    /*    display: inline;*/
+    
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+a {
+    color: #2489ed;
+    transition: color .4s;
+}
+a:hover {
+    color: black;
+    transition: color .4s;
+}
+p {
+    color: rgb(0, 50, 70);
+    line-height: 1.35em;
+    padding-bottom: .7em;
+}
+/*Bucket styles*/
+
+.bucket {
+    padding: 2em 3em 2em 3em;
+    min-height: 600px;
+}
+.bucket p {
+    font-size: 1.5rem;
+}
+.bucket h2 {
+    color: #2489ed;
+    padding-bottom: 60px;
+}
+.bucket_text {
+    width: 60%;
+}
+.bucket img {
+    width: 100%;
+}
+.bucket_img {
+    width: 35%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+    width: 100%;
+}
+#tagline {
+    color: white;
+    text-align: center;
+    padding: 5em 0 6em 0;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    transition: box-shadow .4s;
+}
+#tagline h2 {
+    padding: .5em;
+}
+#video {
+    margin: 0 25% 0 25%;
+    position: relative;
+    bottom: 2em;
+    border: 4px solid white;
+    background-color: rgba(37, 137, 237, .6);
+}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    padding: .5em;
+    font-size: 2rem;
+    color: #2489ed;
+}
+#about_us {
+    padding-top: 4em;
+}
+#mission, #utility {
+    background: #2489ed;
+}
+#mission h2, #utility h2 {
+    color: white;
+}
+#mission {
+    background-image: url('img/PIC2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(37, 137, 237, .4);
+    background-image: linear-gradient(to bottom, rgba(37, 137, 237, .6), rgba(37, 137, 237, .6)), url("img/PIC2.jpg");
+    background-image: -moz-linear-gradient(top, rgba(37, 137, 237, .6), rgba(37, 137, 237, .6)), url("img/PIC2.jpg");
+    background-image: -o-linear-gradient(top, rgba(37, 137, 237, .6), rgba(37, 137, 237, .6)), url("img/PIC2.jpg");
+    background-image: -ms-linear-gradient(top, rgba(37, 137, 237, .6), rgba(37, 137, 237, .6)), url("img/PIC2.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 137, 237, .6)), to(rgba(37, 137, 237, .6))), url("img/PIC2.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(37, 137, 237, .6), rgba(37, 137, 237, .6)), url("img/PIC2.jpg");
+}
+#mission p {
+    color: white !important;
+}
+#utility p {
+    color: white !important;
+}
+input[type=text] {
+    padding: 10px 15px;
+    border: 2px solid #b8f2ff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #2489ed;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 800px;
+    transition:.2s;
+}
+input[type=text]:focus {
+    border-color: white;
+}
+input[type=text]:hover {
+    border-color: white;
+    transition:.2s;
+}
+input[type=submit] {
+    padding: 15px;
+    background: white;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,.5);
+}
+:-moz-placeholder {
+    color: rgba(255,255,255,.5);
+    opacity: 1;
+}
+::-moz-placeholder {
+    color: rgba(255,255,255,.5);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: rgba(255,255,255,.5);
+}
+input[type=button] {
+    padding: 10px 15px;
+    border: 2px solid white;
+    background-color: white;
+    font-size: 1.5rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color:#2489ed;
+    transition:.2s;
+}
+input[type=button]:hover {
+    background-color: #2489ed;
+    color: white;
+    cursor: pointer;
+    transition:.2s;
+}
+#map-canvas {
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+#footer h3 {
+    padding-bottom: 40px;
+}
+#footer p {
+    font-size: 1.5rem;
+}
+#logo {
+    width: 50%;
+    margin: 50px auto 0 auto;
+    display: block;
+}
+/*MAP STYLES*/
+
+#outputDiv {
+    height: 20px;
+}
+@media screen and (max-width: 640px) {
+    /*end*/
+    h2{font-size: 60%;}
+    #video{ margin: 0 5% 0 5%;
+    	bottom: 3em;
+    }
+    .bucket {
+        padding: 1em 1em .5em 1em;
+    }
+    .left {
+        float: none;
+    }
+    .right {
+        float: none;
+    }
+    .bucket_text {
+        width: 100%;
+    }
+    .bucket_img {
+        width: 100%;
+    }
+    #logo {
+        width: 90%;
+    }
+    #title{display: none;}
+    #menu{right: -10px;top:10px;}
+    input[type=button]{margin-top: 20px;}
+}

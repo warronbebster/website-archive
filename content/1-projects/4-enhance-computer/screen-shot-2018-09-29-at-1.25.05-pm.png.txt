@@ -1,0 +1,21 @@
+Class: 
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 1
+
+----
+
+Caption: 
+
+----
+
+What: 
+
+----
+
+Sort: 1

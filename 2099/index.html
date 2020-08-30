@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>2099</title>
+    <meta property="og:image" content="http://www.barronwebster.com/content/1.projects/22.2099/8.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <p id="download"><a href="otf/2099.zip" style="font-family:Rasterfont; font-style:italic;" download>Download 2099.</a>
+    </p>
+    <a id="pause" style="font-family:Rasterfont; font-weight:Bold; font-style:italic;">||</a>
+    <div id="blocker" style="font-family:Rasterfont">
+        <div id="instructions">
+            <p>It is the year 2001.</p>
+            <!-- Insert live date here? -->
+            <p>You primarily consume your culture through virtual cyberspace.</p>
+            <p>Text needs to be flashy and distracting to cut through the virtual clutter.</p>
+            <p>Press F to toggle VR if you have a VR-enabled browser and a VR device.</p>
+            <p>Music by <a href="https://soundcloud.com/art-strike-festival">Art Strike Festival</a>
+                <p><span id="activate" style="font-family:Rasterfont; font-weight:Bold;">Activate</span>
+                </p>
+        </div>
+    </div>
+    <div id="hold"></div>
+
+
+    <audio id="tunes" autoplay loop>
+        <source src="tunes/LookingForYouLoop_192.mp3" type="audio/mpeg" />
+    </audio>
+
+</body>
+
+<script src="js/three.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script src="js/Detector.js"></script>
+
+<script src="js/VRControls.js"></script>
+<script src="js/VREffect.js"></script>
+
+<script src="js/OrbitControls.js"></script>
+
+<script src="otf/2099_regular.typeface.js"></script>
+
+
+<script>
+if (!Detector.webgl) Detector.addGetWebGLMessage();
+
+var VR = false; //if VR is on or not
+var scene, camera, renderer, controls, effect, skyBox;
+var clock = new THREE.Clock();
+
+//custom objects
+var NSAApproved, USA, Organic, Fascist, Rad, cylinder, curvedPlane, curvedPlane2, curvedPlane3, curvedPlane4, curvedPlane5, curvedPlane6, curvedPlane7, curvedPlane8;
+
+//Setup three.js WebGL renderer
+var renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true
+});
+//set background color
+renderer.setClearColorHex(0x000000, 0);
+//Append the canvas element created by the renderer to document body element.
+document.body.appendChild(renderer.domElement);
+
+
+
+
+function init() {
+    //Create a three.js scene
+    scene = new THREE.Scene();
+
+    //Create a three.js camera and position it
+    camera = new THREE.PerspectiveCamera(85, window.innerWidth / window.innerHeight, 1, 7000);
+    camera.position.set(0, 0, 1);
+
+    if (VR) { //Apply VR headset positional data to camera.
+        controls = new THREE.VRControls(camera);
+    } else { //drag controls using orbitcontrol
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+    }
+
+    //Apply VR stereo rendering to renderer
+    effect = new THREE.VREffect(renderer);
+    effect.setSize(window.innerWidth, window.innerHeight);
+
+    //new light?
+    var light = new THREE.PointLight(0xffff00);
+    light.position.set(10, 10, 10);
+    scene.add(light);
+
+    // scene.add( new THREE.AmbientLight( 0x222222 ) );
+
+
+
+    // SKYBOX
+    var imagePrefix = "skybox/";
+    var directions = ["side3", "side4", "top", "bottom", "side2", "side1"];
+    var imageSuffix = ".jpg";
+    var skyGeometry = new THREE.CubeGeometry(5000, 5000, 5000);
+
+    var materialArray = [];
+    for (var i = 0; i < 6; i++)
+        materialArray.push(new THREE.MeshBasicMaterial({
+            map: THREE.ImageUtils.loadTexture(imagePrefix + directions[i] + imageSuffix),
+            side: THREE.BackSide
+        }));
+    var skyMaterial = new THREE.MeshFaceMaterial(materialArray);
+    skyBox = new THREE.Mesh(skyGeometry, skyMaterial);
+    scene.add(skyBox);
+
+
+    cubeCamera = new THREE.CubeCamera(1, 4000, 512);
+    cubeCamera.renderTarget.minFilter = THREE.LinearMipMapLinearFilter;
+    scene.add(cubeCamera);
+    var mirrormaterial = new THREE.MeshBasicMaterial({
+        envMap: cubeCamera.renderTarget
+    });
+
+
+
+    //3d stuff below!
+
+
+    //specimen type
+    var canvasA = document.createElement('canvas');
+    canvasA.width = 4096;
+    canvasA.height = 284;
+    var contextA = canvasA.getContext('2d');
+    contextA.translate(canvasA.width / 2, canvasA.height / 2);
+    contextA.textAlign = 'center';
+    contextA.scale(-1, 1); //reflect
+    contextA.font = "228px Rasterfont";
+    contextA.fillStyle = "rgba(255,255,255,.6)";
+    contextA.fillText('AÁĂÂÄÀÃBCDEÉÊËÈFGHIÍÎÏÌJKLMNÑO', 0, 90);
+    // canvas contents will be used for a texture
+    var textureA = new THREE.Texture(canvasA)
+    textureA.needsUpdate = true;
+    //
+    var materialA = new THREE.MeshBasicMaterial({
+        map: textureA,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderA = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialA);
+    // cylinder.overdraw = true;
+    cylinderA.position.y = 375;
+    scene.add(cylinderA);
+
+
+    var canvasB = document.createElement('canvas');
+    canvasB.width = 4096;
+    canvasB.height = 284;
+    var contextB = canvasB.getContext('2d');
+    contextB.translate(canvasB.width / 2, canvasB.height / 2);
+    contextB.textAlign = 'center';
+    contextB.scale(-1, 1); //reflect
+    contextB.font = "228px Rasterfont";
+    contextB.fillStyle = "rgba(255,255,255,.6)";
+    contextB.fillText('ÓÔÖÒÕPQRSTUÚÛÜÙVWXYÝŸZaáăâäàãb', 0, 90);
+    // canvas contents will be used for a texture
+    var textureB = new THREE.Texture(canvasB)
+    textureB.needsUpdate = true;
+    //
+    var materialB = new THREE.MeshBasicMaterial({
+        map: textureB,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderB = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialB);
+    // cylinder.overdraw = true;
+    cylinderB.position.y = 225;
+    scene.add(cylinderB);
+
+
+    var canvasC = document.createElement('canvas');
+    canvasC.width = 4096;
+    canvasC.height = 284;
+    var contextC = canvasC.getContext('2d');
+    contextC.translate(canvasC.width / 2, canvasC.height / 2);
+    contextC.textAlign = 'center';
+    contextC.scale(-1, 1); //reflect
+    contextC.font = "228px Rasterfont";
+    contextC.fillStyle = "rgba(255,255,255,.6)";
+    contextC.fillText('cdeéêëèfghiıíîïìjklmnñoóôöòõpq', 0, 70);
+    // canvas contents will be used for a texture
+    var textureC = new THREE.Texture(canvasC)
+    textureC.needsUpdate = true;
+    //
+    var materialC = new THREE.MeshBasicMaterial({
+        map: textureC,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderC = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialC);
+    // cylinder.overdraw = true;
+    cylinderC.position.y = 75;
+    scene.add(cylinderC);
+
+
+    var canvasD = document.createElement('canvas');
+    canvasD.width = 4096;
+    canvasD.height = 284;
+    var contextD = canvasD.getContext('2d');
+    contextD.translate(canvasD.width / 2, canvasD.height / 2);
+    contextD.textAlign = 'center';
+    contextD.scale(-1, 1); //reflect
+    contextD.font = "228px Rasterfont";
+    contextD.fillStyle = "rgba(255,255,255,.6)";
+    contextD.fillText('rstuúûüùvwxyýÿz0123456789⁄*•:,', 0, 70);
+    // canvas contents will be used for a texture
+    var textureD = new THREE.Texture(canvasD)
+    textureD.needsUpdate = true;
+    //
+    var materialD = new THREE.MeshBasicMaterial({
+        map: textureD,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderD = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialD);
+    // cylinder.overdraw = true;
+    cylinderD.position.y = -75;
+    scene.add(cylinderD);
+
+
+    var canvasE = document.createElement('canvas');
+    canvasE.width = 4096;
+    canvasE.height = 284;
+    var contextE = canvasE.getContext('2d');
+    contextE.translate(canvasE.width / 2, canvasD.height / 2);
+    contextE.textAlign = 'center';
+    contextE.scale(-1, 1); //reflect
+    contextE.font = "228px Rasterfont";
+    contextE.fillStyle = "rgba(255,255,255,.6)";
+    contextE.fillText('…!¡#.·?¿";/_{}[]()—–™‹›„“”‘’‚', 0, 70);
+    // canvas contents will be used for a texture
+    var textureE = new THREE.Texture(canvasE)
+    textureE.needsUpdate = true;
+    //
+    var materialE = new THREE.MeshBasicMaterial({
+        map: textureE,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderE = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialE);
+    // cylinder.overdraw = true;
+    cylinderE.position.y = -225;
+    scene.add(cylinderE);
+
+
+    var canvasF = document.createElement('canvas');
+    canvasF.width = 4096;
+    canvasF.height = 284;
+    var contextF = canvasF.getContext('2d');
+    contextF.translate(canvasF.width / 2, canvasF.height / 2);
+    contextF.textAlign = 'center';
+    contextF.scale(-1, 1); //reflect
+    contextF.font = "228px Rasterfont";
+    contextF.fillStyle = "rgba(255,255,255,.6)";
+    contextF.fillText('¢¤$€£¥≈~÷∅=>≥∞<≤®×≠%+±&@|©†‡°¶', 0, 70);
+    // canvas contents will be used for a texture
+    var textureF = new THREE.Texture(canvasF)
+    textureF.needsUpdate = true;
+    //
+    var materialF = new THREE.MeshBasicMaterial({
+        map: textureF,
+        side: THREE.BackSide,
+        transparent: true,
+    });
+
+    cylinderF = new THREE.Mesh(
+        new THREE.CylinderGeometry(300, 300, 100, 70, 70, true), //(toprad,bottomrad,height,segments,segments,openended)
+        materialF);
+    // cylinder.overdraw = true;
+    cylinderF.position.y = -375;
+    scene.add(cylinderF);
+
+
+
+
+
+    //weird curved plane sphere chunk  REGULAR
+    var canvas2 = document.createElement('canvas');
+    canvas2.width = 4000;
+    canvas2.height = 1200;
+    var context2 = canvas2.getContext('2d');
+    context2.translate(canvas2.width / 2, canvas2.height / 2);
+    context2.scale(-1, 1); //reflect
+    context2.textAlign = 'center';
+    context2.font = "800px Rasterfont";
+    context2.fillStyle = "rgb(255,255,0)";
+    context2.fillText('Regular', 0, 200);
+    // canvas contents will be used for a texture
+    var texture2 = new THREE.Texture(canvas2)
+    texture2.needsUpdate = true;
+    texture2.tran = true;
+    //
+    var material2 = new THREE.MeshBasicMaterial({
+        map: texture2,
+        side: THREE.DoubleSide
+    });
+    material2.transparent = true; //important 
+
+    geometry = new THREE.SphereGeometry(5, 20, 4, 0, 2.3, .6 /*change this to adjust angle*/ , .5);
+    material = new THREE.MeshBasicMaterial({
+        color: 0xffff00,
+        wireframe: true,
+    });
+
+    curvedPlane = new THREE.Mesh(geometry, material2);
+    scene.add(curvedPlane);
+
+    curvedPlane2 = new THREE.Mesh(geometry, material);
+    scene.add(curvedPlane2);
+
+
+
+    //bold
+    var canvas1 = document.createElement('canvas');
+    canvas1.width = 2400;
+    canvas1.height = 1200;
+    var context1 = canvas1.getContext('2d');
+    context1.translate(canvas1.width / 2, canvas1.height / 2);
+    context1.scale(-1, 1); //reflect
+    context1.textAlign = 'center';
+    context1.font = "Bold 800px Rasterfont";
+    context1.fillStyle = "rgb(255,255,0)";
+    context1.fillText('Bold', 0, 200);
+    // canvas contents will be used for a texture
+    var texture1 = new THREE.Texture(canvas1)
+    texture1.needsUpdate = true;
+    //
+    var material1 = new THREE.MeshBasicMaterial({
+        map: texture1,
+        side: THREE.DoubleSide,
+        transparent: true,
+        // combine: THREE.MixOperation 
+    });
+
+    geometry = new THREE.SphereGeometry(5, 16, 4, 0, 1.2, 1.1 /*change this to adjust angle*/ , .5);
+    material = new THREE.MeshBasicMaterial({
+        color: 0xffff00,
+        wireframe: true
+    });
+
+    curvedPlane3 = new THREE.Mesh(geometry, material1);
+    scene.add(curvedPlane3);
+
+    curvedPlane4 = new THREE.Mesh(geometry, material);
+    scene.add(curvedPlane4);
+
+
+
+    //italic
+    var canvas3 = document.createElement('canvas');
+    canvas3.width = 3800;
+    canvas3.height = 1200;
+    var context3 = canvas3.getContext('2d');
+    context3.translate(canvas3.width / 2, canvas3.height / 2);
+    context3.scale(-1, 1); //reflect
+    context3.textAlign = 'center';
+    context3.font = "Italic 800px Rasterfont";
+    context3.fillStyle = "rgb(255,255,0)";
+    context3.fillText('Oblique', 0, 200);
+    // canvas contents will be used for a texture
+    var texture3 = new THREE.Texture(canvas3)
+    texture3.needsUpdate = true;
+    //
+    var material3 = new THREE.MeshBasicMaterial({
+        map: texture3,
+        side: THREE.DoubleSide
+    });
+    material3.transparent = true; //important 
+
+    geometry = new THREE.SphereGeometry(5, 20, 4, 0, 1.9, 1.6 /*change this to adjust angle*/ , .5);
+    material = new THREE.MeshBasicMaterial({
+        color: 0xffff00,
+        wireframe: true
+    });
+
+    curvedPlane5 = new THREE.Mesh(geometry, material3);
+    scene.add(curvedPlane5);
+
+    curvedPlane6 = new THREE.Mesh(geometry, material);
+    scene.add(curvedPlane6);
+
+
+
+    //bold italic
+    var canvas4 = document.createElement('canvas');
+    canvas4.width = 6000;
+    canvas4.height = 1200;
+    var context4 = canvas4.getContext('2d');
+    context4.translate(canvas4.width / 2, canvas4.height / 2);
+    context4.scale(-1, 1); //reflect
+    context4.textAlign = 'center';
+    context4.font = "Italic Bold 800px Rasterfont";
+    context4.fillStyle = "rgb(255,255,0)";
+    context4.fillText('Bold Oblique', 0, 200);
+    // canvas contents will be used for a texture
+    var texture4 = new THREE.Texture(canvas4)
+    texture4.needsUpdate = true;
+    //
+    var material4 = new THREE.MeshBasicMaterial({
+        map: texture4,
+        side: THREE.DoubleSide
+    });
+    material4.transparent = true; //important 
+
+    geometry = new THREE.SphereGeometry(5, 30, 4, 0, 3.5, 2.1 /*change this to adjust angle*/ , .5);
+    material = new THREE.MeshBasicMaterial({
+        color: 0xffff00,
+        wireframe: true
+    });
+
+    curvedPlane7 = new THREE.Mesh(geometry, material4);
+    scene.add(curvedPlane7);
+
+    curvedPlane8 = new THREE.Mesh(geometry, material);
+    scene.add(curvedPlane8);
+
+
+    // 3d extruded text NSA Approved
+    var materialFront = new THREE.MeshLambertMaterial({
+        color: 0xffffff,
+        ambient: 0xffffff,
+        emissive: 0xff00ff
+    });
+    var materialArray = [materialFront, mirrormaterial];
+    var textGeom = new THREE.TextGeometry("NSA Approved!", {
+        size: 30,
+        height: 10,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+        bevelThickness: 1,
+        bevelSize: .5,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1
+    });
+
+    var textMaterial = new THREE.MeshFaceMaterial(materialArray);
+    NSAApproved = new THREE.Mesh(textGeom, textMaterial);
+
+    textGeom.computeBoundingBox();
+    var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+
+    NSAApproved.position.set(0 - (textWidth / 2), 20, -180);
+    scene.add(NSAApproved);
+
+
+    //USA
+
+    var textGeom = new THREE.TextGeometry("USA®©™", {
+        size: 15,
+        height: 5,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+        bevelThickness: 1,
+        bevelSize: .2,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1
+    });
+
+    USA = new THREE.Mesh(textGeom, textMaterial);
+
+    textGeom.computeBoundingBox();
+    var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+
+    USA.position.set(0 - (textWidth / 2), 90, 0);
+    USA.rotation.x = Math.PI / 2;
+    scene.add(USA);
+
+
+
+    //Certified Organic
+
+    var textGeom = new THREE.TextGeometry("99% Organic!", {
+        size: 15,
+        height: 5,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+        bevelThickness: 1,
+        bevelSize: .2,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1
+    });
+
+    Organic = new THREE.Mesh(textGeom, textMaterial);
+
+    textGeom.computeBoundingBox();
+    var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+
+    Organic.position.set(0 - (textWidth / 2), -90, 0);
+    Organic.rotation.x = Math.PI / 2;
+    scene.add(Organic);
+
+
+
+
+    var textGeom = new THREE.TextGeometry("Not Fascist!", {
+        size: 30,
+        height: 10,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+        bevelThickness: 1,
+        bevelSize: .5,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1
+    });
+
+    Fascist = new THREE.Mesh(textGeom, textMaterial);
+
+    textGeom.computeBoundingBox();
+    var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+
+    Fascist.position.set(0 + (textWidth / 2), 20, 180);
+    Fascist.rotation.y = Math.PI;
+    scene.add(Fascist);
+
+
+
+    //curved weird type
+
+    var randomPoints = [];
+
+    for (var i = 0; i < 5; i++) {
+        randomPoints.push(new THREE.Vector3((i-5)*70, -Math.pow(i,3), Math.pow(i,3)));
+    }
+
+    var randomSpline = new THREE.SplineCurve3(randomPoints);
+
+    var extrudeSettings = {
+        steps: 100,
+        bevelThickness: 1,
+        bevelSize: 5,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1,
+        extrudePath: randomSpline
+    };
+
+
+    var textShapes = THREE.FontUtils.generateShapes("Half Off!", {
+        size: 50,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+    });
+
+    var geometry = new THREE.ExtrudeGeometry(textShapes, extrudeSettings);
+
+    var mesh = new THREE.Mesh(geometry, textMaterial);
+    mesh.position.set(-300, 50, 150);
+
+    scene.add(mesh);
+
+
+
+
+    for (var i = 0; i < 5; i++) {
+        randomPoints.push(new THREE.Vector3(-(i-5)*70, -Math.pow(i,3), Math.pow(i,3)));
+    }
+
+    randomSpline = new THREE.SplineCurve3(randomPoints);
+
+    var extrudeSettings = {
+        steps: 100,
+        bevelThickness: 1,
+        bevelSize: 5,
+        bevelEnabled: true,
+        material: 0,
+        extrudeMaterial: 1,
+        extrudePath: randomSpline
+    };
+
+
+    var textShapes = THREE.FontUtils.generateShapes("Cool!", {
+        size: 50,
+        curveSegments: 5,
+        font: "2099",
+        weight: "normal",
+        style: "normal",
+    });
+
+    var geometry = new THREE.ExtrudeGeometry(textShapes, extrudeSettings);
+
+    var mesh = new THREE.Mesh(geometry, textMaterial);
+    mesh.position.set(300, 100, -150);
+
+    scene.add(mesh);
+}
+
+
+//render scene function
+function animate() {
+
+    //NSA
+    NSAApproved.rotation.x += .03;
+    USA.rotation.x += .03;
+    Organic.rotation.x += .03;
+    Fascist.rotation.x += .03;
+
+    cylinderA.rotation.y -= 0.0005;
+    cylinderB.rotation.y += 0.0005;
+    cylinderC.rotation.y -= 0.0005;
+    cylinderD.rotation.y += 0.0005;
+    cylinderE.rotation.y -= 0.0005;
+    cylinderF.rotation.y += 0.0005;
+
+    //rotate weights
+    curvedPlane.rotation.y -= 0.0008;
+    curvedPlane2.rotation.y += 0.0016;
+    curvedPlane3.rotation.y += 0.001;
+    curvedPlane4.rotation.y -= 0.0018;
+    curvedPlane5.rotation.y -= 0.0012;
+    curvedPlane6.rotation.y += 0.002;
+    curvedPlane7.rotation.y += 0.0014;
+    curvedPlane8.rotation.y -= 0.0022;
+
+    //rotate skybox
+    skyBox.rotation.z -= 0.0002;
+    skyBox.rotation.y -= 0.0002;
+
+    //update controls
+    controls.update();
+
+    cubeCamera.updateCubeMap(renderer, scene);
+
+    if (VR) { //Render the scene through the VREffect.
+        effect.render(scene, camera);
+    } else { //Render the scene normally.
+        renderer.render(scene, camera);
+    }
+
+    requestAnimationFrame(animate);
+}
+
+
+//actually call functions
+$(document).ready(function() {
+    init();
+    animate();
+});
+
+
+//Listen for keyboard event and zero positional sensor on appropriate keypress.
+function onkey(event) {
+    event.preventDefault();
+    if (event.keyCode == 70) { // f, toggle VR
+        // Whack fullscreen
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+        if (VR == false) {
+            effect.setFullScreen(true);
+        }
+        if (VR) {
+            exitFullscreen();
+        }
+        VR = !VR;
+        init();
+    }
+
+    if (event.keyCode == 27) { // esc
+        VR = !VR;
+        init();
+    }
+
+    if (event.keyCode == 69) { // e
+        VR = !VR;
+        init();
+    }
+
+    if (event.keyCode == 90) { // z zero VR
+        controls.zeroSensor();
+    }
+};
+
+//call keyboard function when button is pressed
+window.addEventListener("keydown", onkey, true);
+
+//Handle window resizes
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    effect.setSize(window.innerWidth, window.innerHeight);
+}
+
+//call window resize
+window.addEventListener('resize', onWindowResize, false);
+
+$(document).ready(function() {
+
+    $("#activate").click(function() {
+        $("#blocker").css("display", "none");
+        $("#hold").css("display", "none");
+        init();
+    });
+    $("#hold").click(function() {
+        $("#blocker").css("display", "none");
+        $("#hold").css("display", "none");
+        init();
+    });
+
+
+    var paused;
+    paused = false;
+    var tunes = document.getElementById("tunes");
+
+
+    $("#pause").click(function() {
+        if (paused == false) {
+            console.log(paused);
+            tunes.pause();
+            paused = true;
+            console.log(paused);
+        } else if (paused == true) {
+            tunes.play();
+            paused = false;
+        }
+    });
+});
+</script>
+
+</html>

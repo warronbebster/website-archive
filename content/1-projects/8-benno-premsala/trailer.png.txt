@@ -1,0 +1,25 @@
+Class: 
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 1
+
+----
+
+Caption: 
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 3

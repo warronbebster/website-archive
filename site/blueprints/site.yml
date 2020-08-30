@@ -1,0 +1,39 @@
+title: Site
+
+pages: default
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  author:
+    label: Author
+    type:  text
+
+  description:
+    label: Description
+    type:  textarea
+    
+  copyright:
+    label: Copyright
+    type:  textarea
+
+  previously:
+    label: previously
+    type:  textarea
+
+  friends:
+    label: friends
+    type:  textarea
+
+files:
+  sortable: true
+  caption:
+    label: caption
+    type:  text
+
+  class:
+    label: class
+    type:  text
+    default: small

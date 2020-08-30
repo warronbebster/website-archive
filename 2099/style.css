@@ -1,0 +1,165 @@
+/*@font-face {
+    font-family: "2099";
+    src: url("otf/2099-Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "2099";
+    src: url("otf/2099-Bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "2099";
+    src: url("otf/2099-Italic.otf");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "2099Bold";
+    src: url("otf/2099-BoldItalic.otf");
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'Rasterfont';
+    src: url('webfont2/2099-regular-webfont.eot');
+    src: url('webfont2/2099-regular-webfont.eot?#iefix') format('embedded-opentype'), url('webfont2/2099-regular-webfont.woff2') format('woff2'), url('webfont2/2099-regular-webfont.woff') format('woff'), url('webfont2/2099-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rasterfont';
+    src: url('webfont2/2099-bold-webfont.eot');
+    src: url('webfont2/2099-bold-webfont.eot?#iefix') format('embedded-opentype'), url('webfont2/2099-bold-webfont.woff2') format('woff2'), url('webfont2/2099-bold-webfont.woff') format('woff'), url('webfont2/2099-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rasterfont';
+    src: url('webfont2/2099-italic-webfont.eot');
+    src: url('webfont2/2099-italic-webfont.eot?#iefix') format('embedded-opentype'), url('webfont2/2099-italic-webfont.woff2') format('woff2'), url('webfont2/2099-italic-webfont.woff') format('woff'), url('webfont2/2099-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Rasterfont';
+    src: url('webfont2/2099-bolditalic-webfont.eot');
+    src: url('webfont2/2099-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('webfont2/2099-bolditalic-webfont.woff2') format('woff2'), url('webfont2/2099-bolditalic-webfont.woff') format('woff'), url('webfont2/2099-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    background-color: rgba(255, 255, 255, .5);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: move;
+    width: 100%;
+    height: 100%;
+    font-family: 'Rasterfont', monospace;
+    font-size: 30px;
+    font-style: normal;
+}
+p, span {
+    padding: 0;
+    color: rgb(255, 0, 255);
+}
+#hold {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(255, 255, 200, .9);
+}
+#blocker {
+    position: fixed;
+    padding: 0 30px 30px 30px;
+    left: 0;
+    right: 0;
+    margin: 40px auto 0 auto;
+    display: block;
+    width: 640px;
+    height: 510px;
+    border: 2px solid white;
+    z-index: 5;
+    /*background-color: rgba(255,255,255,.8);*/
+    
+    background: -webkit-linear-gradient(left top, rgba(255, 255, 255, .8), rgba(0, 255, 255, .9));
+    /* For Safari 5.1 to 6.0 */
+    
+    background: -o-linear-gradient(bottom right, rgba(255, 255, 255, .8), rgba(0, 255, 255, .9));
+    /* For Opera 11.1 to 12.0 */
+    
+    background: -moz-linear-gradient(bottom right, rgba(255, 255, 255, .8), rgba(0, 255, 255, .9));
+    /* For Firefox 3.6 to 15 */
+    
+    background: linear-gradient(to bottom right, rrgba(255, 255, 255, .8), rgba(0, 255, 255, .9));
+    /* Standard syntax */
+}
+#download {
+    position: fixed;
+    display: block;
+    left: 0;
+    z-index: 10;
+    bottom: 10px;
+    width: 300px;
+    text-align: center;
+    right: 0;
+    /*bottom: 10px;*/
+    
+    margin: 0 auto 0 auto;
+}
+#pause {
+    position: fixed;
+    display: block;
+    z-index: 7;
+    bottom: 10px;
+    text-decoration: none;
+    width: 100px;
+    text-align: right;
+    letter-spacing: -7px;
+    font-weight: bold;
+    right: 20px;
+    /*bottom: 10px;*/
+}
+#activate {
+    transition: .2s;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid magenta;
+}
+#activate:hover {
+    cursor: pointer;
+    background-color: magenta;
+    color: white;
+    transition: .2s;
+}
+a {
+    text-decoration: underline;
+    color: magenta;
+    transition: .2s;
+}
+a:hover {
+    color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+@media screen and (max-width: 740px) {
+    #blocker {
+        padding: 0 20px 20px 20px;
+        font-size: 20px;
+        margin: 40px auto 0 auto;
+        width: 340px;
+        height: 370px;
+    }
+    #x {
+    bottom: 385px;
+    left: 331px;
+}
+#download{display: none;}
+}

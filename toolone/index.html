@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tool(1)</title>
+    <meta name="description" content="Tool() Symposium">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="author" content="Barron Webster">
+    <meta name="keyword" content="RISD, Tools, BEB, Architecture">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+
+
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=182100(font-family=Freight+Big+Pro+Book)&sid=182102(font-family=Freight+Big+Pro+Medium)&sid=182103(font-family=Freight+Big+Pro+SemiBold)&sid=182109(font-family=Freight+Big+Pro+Light)&key=ftGddhYjBo',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+    </script>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+
+    <section class="hold">
+        <div class="red"></div>
+
+        <section class="contain">
+            <h3 id="one">
+            <span>
+        2/25 Wednesday<br/>
+        @ 6:30 (BEB)<br/>
+        Exhibit &amp;<br/>
+        Panel Discussion:<br/>
+        </span>
+        Luke Ogrydziak (OPA)<br/>
+        John Caserta (GD)<br/>
+        Kai Franz (Foundations)<br/>
+        Stefanie Pender (Glass)<br/>
+        Andrew Stein Raftery (Print)<br/>
+        </h3>
+
+            <h3 id="two">
+            <span>
+            2/26 Thursday<br/>
+            @ 6:30 (BEB 106)<br/>
+            Lecture:<br/>
+            Luke Ogrydziak<br/>
+            </span>
+        </h3>
+
+            <p>In most creative pursuits, the nature of one’s tools is intimately related to the object of creation. Rather than accept conventional disciplinary groupings of preexisting tools, this session values the kind of discipline that emerges from intense focus on craft and technique. The question this session poses is not “what is the best tool?” but rather, “what is the most meaningful, novel, strange, or provocative tool?” Faculty will embody the gradient that exists between the toolmaker and the artisan, showcasing both those who make invisible tools as well as those whose tools pervade the very subject matter of their work. This session will emphasize line, abstraction and procedure– common ground between artists and designers–which mediate the cold neutrality of the tool with the intuitive presence of the author.
+                <br/>
+                <br/><a href="http://risdtool.org" style="text-decoration:none; color:inherit; font-size:40px;">risdtool.org</a>
+                <br/>2015
+                
+            </p>
+        </section>
+
+        <h1 class="title">tool<span style="letter-spacing:20px">()</span></h1>
+        <div id="rotate">
+            <h2>Artisan-Toolmaker</h2>
+        </div>
+        <div class="opa">
+            <canvas id="simple_sketch" width="2000" height="4000" style="position:relative; bottom:2000px;opacity:.4;"></canvas>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <script type='text/javascript' src='script.js'></script>
+
+
+    <script type="text/javascript">
+    var needFirstPoint = true;
+
+    function drawNextLine(ctx, x, y) {
+        if (needFirstPoint) {
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            needFirstPoint = false;
+        } else {
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = '#fff';
+            ctx.stroke();
+        }
+    }
+
+    $(document).ready(function() {
+        var canvas = $('#simple_sketch').get(0);
+        if (!canvas.getContext) {
+            return;
+        }
+        var ctx = canvas.getContext('2d');
+
+        $('#simple_sketch').on('click', function(e) {
+            var offset = $(this).offset();
+            var x = e.pageX - offset.left;
+            var y = e.pageY - offset.top;
+            drawNextLine(ctx, x, y);
+        });
+    });
+    </script>
+
+
+
+</body>
+
+</html>

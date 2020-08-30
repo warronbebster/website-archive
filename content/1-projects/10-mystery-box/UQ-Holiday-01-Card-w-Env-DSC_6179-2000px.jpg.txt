@@ -1,0 +1,21 @@
+Class: border
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0
+
+----
+
+Caption: 
+
+----
+
+What: 
+
+----
+
+Sort: 6

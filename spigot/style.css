@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    /*list-style: none;*/
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/*         */
+/*ended*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'San Francisco';
+    font-weight: 400;
+    src: url("otf/SanFranciscoText-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'San Francisco';
+    font-weight: 500;
+    src: url("otf/SanFranciscoText-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'San Francisco';
+    font-weight: 500;
+    src: url("otf/SanFranciscoText-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'San Francisco';
+    font-weight: 600;
+    src: url("otf/SanFranciscoText-Semibold.otf") format("opentype");
+}
+
+body {
+    font-family: 'San Francisco', sans-serif;
+    font-size: 20px;
+    height: 8700px;
+    color: #002ecc;
+    width: 100vw;
+    /*text-shadow:1px 1px 1px white, -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white;*/
+    /*background-color: #f2f2f2;*/
+}
+
+.bold {
+    font-weight: 500;
+}
+
+#bg {
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.contain {
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 120px;
+    padding-top: 60px;
+    max-width: 400px;
+    color: #002ecc;
+    letter-spacing: -10px;
+    font-weight: 600;
+}
+
+h3 {
+    padding-top: 1400px !important;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -4px;
+}
+
+#head a {
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img,
+video {
+    position: fixed;
+    left: -1000px;
+    z-index: 0;
+    top: 80px;
+    height: 650px;
+}
+
+#head {
+    position: fixed;
+    left: auto;
+    right: 10px;
+    
+    /*font-weight: 600;*/
+}
+
+#head img {
+    left: auto;
+    right: 10px;
+    top: 10px;
+    height: auto;
+    width: 200px;
+    padding: 10px;
+}
+
+#one {
+    left: 1050px;
+}
+
+#two {
+    left: 1000px;
+    transition: opacity .5s;
+}
+
+#two1 {
+    opacity: 0;
+    left: 1332;
+    transition: opacity .5s;
+}
+
+#two2 {
+    left: 1500px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+#two3 {
+    opacity: 0;
+    transition: opacity .5s;
+}
+/*#one, #two, #three, #four, #five, #six {
+    top: 80px;
+    height: 650px;
+}*/
+
+a {
+    transition: color .2s;
+    border-bottom: 2px solid black;
+    color: #263bff;
+    position: relative;
+    z-index: 10;
+}
+
+a:hover {
+    color: #ff2600;
+    transition: color .2s;
+}
+
+p.contain {
+    line-height: 130%;
+    max-width: 480px;
+}
+/*MAP STYLES*/
+
+@media screen and (max-width: 640px) {
+    /*end*/
+    
+    h2 {
+        font-size: 60px;
+        width: 100px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    #head img{
+        width: 100px;
+    }
+}

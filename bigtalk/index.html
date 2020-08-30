@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Big Talk</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="author" content="">
+    <meta name="keyword" content="">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="bg">
+        <section id="tagline">
+            <h2>Big Talk.</h2>
+            <h2>Program without coding.</h2>
+        </section>
+    </div>
+
+    <section class="bucket">
+        <h2>The problem.</h2>
+        <div class="bucket_text left">
+            <p>Programming is currently extremely inaccessible.</p>
+            <p>As the world becomes more mobile-dependent, the gulf between programmers and users is set to become even wider. Even for apps with simple functionality, the ability to create is limited to the trained developers who make and publish applications. Meanwhile, the app goldrush is in full swing, with both Apple’s App Store and the Google Play Store boasting millions of apps and rising, making discovery increasingly difficult.</p>
+        </div>
+        <div class="right bucket_img">
+            <img class="bucket_img" src="img/3.png" />
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket">
+        <h2>Let people define their own programs.</h2>
+        <div class="bucket_text left">
+            <p>We should be able to define what we want out of technology without resorting to cryptic code. We should be able to tell computers what we want them to do, in the ways that we know how. Big Talk is a way for people to make their own programs – to use the computer in their pocket to its fullest potential.</p>
+        </div>
+        <div class="right bucket_img">
+            <img class="bucket_img" src="img/4.png" />
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket">
+        <h2>Don’t code the how. Define the what.</h2>
+        <div class="bucket_text left">
+            <p>Why spend hours wrangling code when you already know what you want your device to do? Big Talk lets you design programs for your life by defining Goals.</p>
+            <p>Goals let Big Talk know what you want out of a program. Using highly advanced machine learning techniques, Big Talk will help you in finding a program that fits your needs.</p>
+            <p>Big Talk functions map inputs to outputs: for example, when the phone receives a shake input, it calls a friend. Goals are created by relating known inputs to known outputs. Inputs and outputs are set using primitives - think of them as objects, or sets of information.</p>
+            <p>Once you give your goals to Big Talk, it gives you back a function which fits your specification. If it doesn’t look right to you, simply tell Big Talk what isn’t working, or make a few more goals. The more precise the inputs and outputs, the faster the system can learn.</p>
+        </div>
+        <div class="right bucket_img">
+            <img class="bucket_img" src="img/2.png" />
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket" style="padding-bottom:0;">
+        <h2>Find your way with Guides.</h2>
+        <div class="bucket_text left">
+            <p>Guides provide an easy way to navigate Big Talk. Guides can contain many features, such as function discovery, accepted functions, collaborative functions development, domain-specific primitives, and custom search interfaces.</p>
+            <p>Guides can be thought of as specialized clients for Big Talk, adding useful functionality for a specific domain. Anyone can make and share a guide.</p>
+            <p>Need to use a certain set of functions regularly? Find a guide for them. Some basic guides:<br/><br/></p>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket" style="padding-top:0;">
+        <div class="bucket_text left">
+            <p><span class="bold">Geo guide</span>
+                <br/> Functions related to location, gps, maps, locality, etc,</p>
+                <ul>
+                    <li>Enter a name, output maps of cities with that name.</li>
+                    <li>Quickest way from a. to b.</li>
+                    <li>Proximity search</li>
+                    <li>Checking elevation</li>
+                </ul>
+                <p style="padding-bottom:0;"><br/>Includes:</p>
+                <ul>
+                    <li>Maps</li>
+                    <li>Longitude/latitude</li>
+                    <li>Proximity</li>
+                    <li>Directions</li>
+                    <li>Place names</li>
+                    <li>Elevation data</li>
+                </ul>
+                <p>
+                <br/>Example: Custom Place Categorization</p>
+                <img class="bucket_img" src="img/8.png"/>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket" style="padding-top:0;">
+        <div class="bucket_text left">
+            <p><span class="bold">Image Processing guide</span>
+                <br/> Functions related to image editing and processing</p>
+                <ul>
+                    <li>Object recognition</li>
+                    <li>Batch processing</li>
+                    <li>Sorting by image data</li>
+                </ul>
+                <p style="padding-bottom:0;"><br/>Includes:</p>
+                <ul>
+                    <li>Image organization</li>
+                    <li>Photo album sets</li>
+                </ul>
+                <p>
+                <br/>Example: Custom image sorting (all images with me in them!)</p>
+                <img class="bucket_img" src="img/9.png"/>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="bucket" style="padding-top:0;">
+        <div class="bucket_text left">
+            <p><span class="bold">Developer guide</span>
+                <br/> Functions related to development.</p>
+                <ul>
+                    <li>Accepted solutions</li>
+                    <li>Constraint-based “quick goals”</li>
+                    <li>Tweak returned function</li>
+                    <li>Export function to other language</li>
+                </ul>
+                <p style="padding-bottom:0;"><br/>Includes:</p>
+                <ul>
+                    <li>Nothing by default! (infinite possibilities!)</li>
+                </ul>
+                <p>
+                <br/>Example: Algorithm via test suite</p>
+                <img class="bucket_img" src="img/10.png"/>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+</body>
+
+</html>

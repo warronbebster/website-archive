@@ -1,0 +1,347 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    /*list-style: none;*/
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*         */
+
+
+/*ended*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    font-weight: 500;
+    src: url("otf/Calibre-Bold.otf") format("opentype");
+}
+
+body {
+    font-family: 'Calibre', Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    /*width: 100vw;*/
+    overflow-x: hidden;
+    background: #800086;
+    color: #3f1796;
+
+}
+
+h1 {
+    display: none;
+}
+
+.header {
+    /*max-width: 500px;*/
+    /*min-width: 0;*/
+    max-width: 500px;
+    position: absolute;
+}
+
+.topleft {
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    top: 0;
+    right: 0;
+}
+
+.bottomright {
+    bottom: 0;
+    right: 0;
+}
+
+.bottomleft {
+    bottom: 0;
+    left: 0;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+a{
+    text-decoration: underline;
+
+}
+p{
+    margin-bottom: 30px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ol{
+    margin-left: 30px;
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    min-width: 940px;
+}
+
+section:nth-of-type(1) {
+    background: url('img/gif.gif');
+    background-size: 25%;
+}
+
+section:nth-of-type(2) {
+    background: url('img/gif2.gif');
+    background-size: 25%;
+}
+
+section:nth-of-type(3) {
+    background: url('img/gif4.gif');
+    background-size: 25%;
+}
+
+section:nth-of-type(4) {
+    background: url('img/gif5.gif');
+    background-size: 25%;
+    height: calc(100vh + 400px);
+}
+
+section:nth-of-type(5) {
+    background: url('img/gif6.gif');
+    background-size: 25%;
+    height: calc(100vh + 1000px);
+}
+section:nth-of-type(6) {
+    background: url('img/gif7.gif');
+    background-size: 25%;
+    height: calc(100vh + 9000px);
+}
+
+
+.container {
+    box-shadow: 0px 0px 15px #3f1796;
+    background-color: #fff8b3;
+    border-radius: 3px;
+    width: 500px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 20;
+}
+
+#one {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+}
+
+#two {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+#three {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+#four {
+    position: absolute;
+    bottom: 20px;
+    right: 110px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+#five {
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+
+.container img{
+    max-width:100%;
+}
+
+
+/*
+img,
+video {
+    position: fixed;
+    left: -100px;
+    z-index: 0;
+    top: 60px;
+    height: 650px;
+    left: -2000px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}*/
+
+@media screen and (max-width: 640px) {
+    section:nth-of-type(1) {
+        background-size: 50%;
+    }
+    section:nth-of-type(2) {
+        background-size: 50%;
+    }
+    section:nth-of-type(3) {
+        background-size: 50%;
+    }
+}

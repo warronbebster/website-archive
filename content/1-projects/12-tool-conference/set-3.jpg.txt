@@ -1,0 +1,25 @@
+Class: bigright
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0
+
+----
+
+Caption: 
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 32

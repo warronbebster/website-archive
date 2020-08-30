@@ -1,0 +1,114 @@
+html{-webkit-font-smoothing: antialiased;}
+/*CSS RESET*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}
+caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}
+legend{color:#000;}
+
+.article{margin: 0px auto 0px auto; font-family: 'Open Sans'; font-style: light;}
+#hero {max-height: 300px;background: rgb(211,211,211) url(images/1.jpg) top no-repeat;background-attachment: fixed;}
+h1{font-family: Open Sans, sans-serif; font-size: 72px;color: white;margin:0 auto 0 auto; font-weight: 300; 
+text-align: center; padding:45px 25px 50px 25px;}
+h2{font-family: Hoefler Text, Goudy Old Style, Sorts Mill Goudy, georgia, serif; color: rgb(210,210,210); font-weight: normal; font-style: italic; 
+	text-align: center; font-size: 48px; margin:80px 0 0 0;}
+#categories {max-width: 960px; margin: 50px auto 50px auto;text-decoration: none;}
+img{margin:0 auto 0 auto;position: relative; transition: .5s -webkit-transform,; -webkit-transition: .5s -webkit-transform;}
+h3{font-size: 36px; font-family: Hoefler Text, Goudy Old Style, Sorts Mill Goudy, georgia, serif; font-style: italic;}
+.category-content{ text-align: center;margin: 0 0 70px 0}
+.category-content img{padding-bottom: 25px;}
+#caption1{color: rgb(255,184,93);}
+#caption2{color: rgb(98,225,239);}
+#caption3{color: rgb(234,106,152);}
+
+	#applying .header {background: #FFB85D url(images/2.jpg) bottom no-repeat;background-attachment: fixed;}
+	#accepted .header {background: #64E2E2 url(images/3.jpg) bottom no-repeat;background-attachment: fixed;}
+	#attending .header {background: #E56385 url(images/4.jpg) bottom no-repeat;background-attachment: fixed;}
+
+.header .content {max-width: 960px; margin:0 auto 0 auto;}
+.header .content h4{font-family: Hoefler Text, Goudy Old Style, Sorts Mill Goudy, georgia, serif; color: white; font-size: 72px; 
+	font-style: italic; text-align: center; padding: 75px 0 50px 0}
+.header .content img{padding: 0 25px 50px 25px;}
+.header .content p{margin: 0 25px 0 25px; padding-bottom: 100px; font-family: 'Open Sans' , sans-serif; font-style: italic; font-weight: 300
+	; font-size: 32px; text-align: justify; color: white;}
+.article{max-width: 960px; margin: 0 auto 0 auto; }
+.article img{margin: 75px auto 50px auto; text-align: center; display: block;}
+.article h5 {font-family: Hoefler Text, Goudy Old Style, Sorts Mill Goudy, georgia, serif; font-style: italic;
+	font-size: 48px; padding-bottom: 25px;}
+
+	#applying .article h5{color: rgb(255,174,83);}
+	#accepted .article h5{color: rgb(98,225,239);}
+	#attending .article h5{color: rgb(229,99,133);}
+
+.copy{padding-bottom: 50px;padding-right: 25px; padding-left: 25px; margin:0;}
+.copy p{font-size: 18px; line-height: 150%; color: rgb(85,85,85);padding-bottom: 25px;}
+.tidbits{font-family: 'Open Sans', Helvetica, sans-serif;padding-bottom: 50px;}
+.tidbits1 { font-family: 'Open Sans', Helvetica, sans-serif;}
+
+	#applying .tidbits{background-color: rgba(255,184,93,.2);}
+	#applying .tidbits1{background-color: rgba(255,184,93,.2); border-top: 1px rgb(255,184,93); border-bottom: 0; border-left: 0;  
+		border-right: 0; border-style: solid;}
+	#accepted .tidbits{background-color: rgba(100,226,226,.15);}
+	#accepted .tidbits1{background-color: rgba(100,226,226,.15); border-top: 1px rgb(100,226,226); border-bottom: 0; border-left: 0;  
+		border-right: 0; border-style: solid;}
+	#attending .tidbits{background-color: rgba(229,99,133,.1);}
+	#attending .tidbits1{background-color: rgba(229,99,133,.1); border-top: 1px rgb(250,141,184); border-bottom: 0; border-left: 0;  
+		border-right: 0; border-style: solid;}
+
+.container{max-width: 960px; margin: 0 auto;text-align: center;padding-top:50px;}
+.container h6, p{text-align: left}
+.tidbit{padding: 0 35px 60px 35px;}
+.tidbit h6{margin-top: 40px; font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 24px;line-height: 140%;}
+
+	#applying .tidbit h6{color:rgb(255,162,69);}
+	#accepted .tidbit h6{color:rgb(74,188,185);}
+	#attending .tidbit h6{color:rgb(229,99,133);}
+
+.tidbit p{font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px; line-height: 160%;color: rgb(85,85,85);}
+
+#accepted{margin: 0; padding: 0;overflow-x:hidden;}
+#applying{margin: 0; padding: 0;overflow-x:hidden;}
+#attending{margin: 0; padding: 0;overflow-x:hidden;}
+
+.footer p{font-family: 'Open Sans', sans-serif; font-size: 32px; text-align: center; padding: 100px 15px 75px 15px;
+	color: rgb(211,211,211); max-width: 960px; margin: 0 auto 0 auto; font-style: italic; font-weight: 300;}
+
+.footer img{margin: 0 auto 0 auto; text-align: center;width:100%;}
+
+#categories a:hover{text-decoration: none;opacity: .8;}
+
+#categories img:hover{-webkit-transform: rotate(20deg); transition: .5s -webkit-transform; -webkit-transition: .5s -webkit-transform;}
+
+#blarg{padding:2em;background-color:#4abcb9;margin:0 auto 0 auto;width:100%;font-family:'open sans', sans-serif;text-align: center;font-size: 1.5em;color: white;}
+
+#blarg a{text-decoration: none;color:black;transition: color .5s;-webkit-transition: color .5s;}
+
+#blarg a:hover{color: white;transition: color .5s;-webkit-transition: color .5s;}
+
+
+/*** Smaller than 880 ***/
+@media screen and (max-width: 880px){
+h1{font-size: 54px;}
+
+.header .content h4{font-size: 54px; padding: 50px 0 25px;}
+.header .content img{padding-bottom: 25px;}
+.header .content p{font-size: 26px;padding-bottom: 50px;}
+}
+
+/*** Smaller than 767 ***/
+@media screen and (max-width: 767px){
+.article h5{text-align: center;}
+.copy{padding-right: 15px; padding-left: 15px;}
+.footer p{font-size: 26px;}
+}
+
+/*** Smaller than 670 ***/
+@media screen and (max-width: 670px){
+h2{font-size: 36px;}
+
+.tidbit img{;width: 150px;}
+.category-content img{width: 150px;}
+.article img{width:150px;}
+}

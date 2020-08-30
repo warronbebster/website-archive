@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" overflow="visible" enable-background="new 0 0 200 200"
+	 xml:space="preserve">
+<defs>
+</defs>
+<circle fill="#FFFFFF" cx="100" cy="100" r="100"/>
+<polygon fill="#FC7094" points="58.703,53.5 70.374,76.342 28.062,119.008 11.779,102.725 "/>
+<polygon fill="#E56385" points="141.297,53.5 131.375,78.092 171.938,119.008 188.221,102.725 "/>
+<polygon fill="#F98CAB" points="113.936,45.75 115.662,51.072 115.663,51.072 100,89.928 84.338,51.074 84.337,51.074 86.063,45.75 
+	58.703,53.5 68.443,84.279 68.443,149.332 100,149.332 131.557,149.332 131.557,84.279 141.297,53.5 "/>
+<polygon fill="#FC7094" points="131.557,149.332 131.557,84.279 141.297,53.5 118.838,47.139 93.012,107.266 93.012,149.332 
+	100,149.332 "/>
+<polygon fill="#FC7094" points="100,89.928 84.338,51.074 84.337,51.074 87.185,42.293 73.532,45.75 99.78,92.613 100.999,89.928 
+	100.62,88.393 "/>
+<polygon fill="#E56385" points="112.725,42.016 115.662,51.072 115.663,51.072 100,89.928 100,89.928 100,89.928 93.012,107.266 
+	127.466,45.75 "/>
+<rect x="110.239" y="82.963" fill="#E56385" width="17.227" height="4.092"/>
+<rect x="68.443" y="132.053" fill="#FC7094" width="8.614" height="4.09"/>
+<rect x="122.942" y="132.053" fill="#E56385" width="8.614" height="4.09"/>
+<polygon fill="#FC7094" points="161.419,108.395 171.938,119.008 188.221,102.725 177.897,91.916 "/>
+<polygon fill="#F98CAB" points="22.103,91.916 11.779,102.725 28.062,119.008 38.581,108.395 "/>
+<circle fill="#FFFFFF" cx="91.478" cy="93.447" r="2.119"/>
+<circle fill="#FFFFFF" cx="101.509" cy="110.438" r="2.119"/>
+<circle fill="#FFFFFF" cx="115.663" cy="110.438" r="2.119"/>
+<circle fill="#FFFFFF" cx="177.329" cy="102.789" r="2.119"/>
+<circle fill="#FFFFFF" cx="21.501" cy="102.789" r="2.119"/>
+<circle fill="#FFFFFF" cx="101.509" cy="126.131" r="2.119"/>
+<circle fill="#FFFFFF" cx="115.663" cy="126.131" r="2.119"/>
+<polygon fill="#5ADAE0" points="108.279,58.279 100,53.5 108.279,48.719 "/>
+<polygon fill="#5ADAE0" points="91.721,58.279 100,53.5 91.721,48.719 "/>
+</svg>

@@ -1,0 +1,21 @@
+Class: biggest
+
+----
+
+Caption: ⤷Legend has it that there are actually ceramics students at RISD. We were never lucky enough to see them in the wild.
+
+----
+
+Sort: 18
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 1
+
+----
+
+What: 

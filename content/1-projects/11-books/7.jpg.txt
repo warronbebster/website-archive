@@ -1,0 +1,21 @@
+Class: bigright
+
+----
+
+Caption: 
+
+----
+
+Sort: 22
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0
+
+----
+
+What: 

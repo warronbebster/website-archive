@@ -1,0 +1,9 @@
+Title: Pay Interns
+
+----
+
+Year: 2017
+
+----
+
+Text: (link: https://github.com/warronbebster/paid-internships text: Pay Interns) is a platform for creating repositories of creative internships that pay a living wage in different cities, like (link: http://payinterns.nyc text: New York City) or London. I wrote an (link: https://www.itsnicethat.com/news/pay-interns-why-it-matters-barron-webster-opinion-180918 text: op-ed for It's Nice That) about why it's important.

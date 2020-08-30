@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Higher Tides Realty Info</title>
+    <meta name="description" content="Climate Change Real Estate!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="author" content="Climate Change Realtors">
+    <meta name="keyword" content="Up and Coming, Global Warming, Sea Rise, Post-Global Warming, Real Estate">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        // Click event for any anchor tag that's href starts with #
+        $('a[href^="#"]').click(function(event) {
+
+            // The id of the section we want to go to.
+            var id = $(this).attr("href");
+
+            // An offset to push the content down from the top.
+            var offset = 0;
+
+            // Our scroll target : the top position of the
+            // section that has the id referenced by our href.
+            var target = $(id).offset().top - offset;
+
+            // The magic...smooth scrollin' goodness.
+            $('html, body').animate({
+                scrollTop: target
+            }, 1000);
+
+            //prevent the page from jumping down to our section.
+            event.preventDefault();
+        });
+    });
+    </script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <section id="title" style="max-width:100px;">
+        <a href="index.html"><img src="img/logo_plain.png" style="max-width:100%;" />
+        </a>
+    </section>
+
+    <section id="about_us" class="bucket">
+        <h2>Terms of Service</h2>
+        <div class="bucket_text left" style="width:80%">
+        <p style="font-size:15px;">
+             All content, information, data, technology and other material found or accessed on (or otherwise made available through) highertidesrealty.com and all subpages and portions thereof for all of these) or otherwise provided by highertidesrealty.com.com (collectively “Content”) is made available for personal informational purposes only. You may not use Content for any commercial purposes without our express written consent. Content is provided “as-is” with all faults. Higher Tides Realty expressly disclaims all warranties of any kind, whether express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose and any warranties that content is non-infringing; that access to content will be uninterrupted or error-free; that content will be virus-free; or that content will be complete, accurate or timely. You assume all risk of your use, possession or reliance on Content. You are cautioned that Content should NOT be used: to assess actual coastal or other hazards, insurance requirements, or property values. in lieu of Flood Insurance Studies and Flood Insurance Rate Maps issued by the Federal Emergency Management Agency (FEMA), for navigation, permitting, zoning or other legal purposes. You agree to defend, indemnify and hold harmless Higher Tides Realty, and its funders, officers, directors, employees, agents, contractors, and subcontractors (collectively “Higher Tides Realty”) from any liability, claim, obligation, demand, causes of action, losses, fees, expenses (“Claims”) associated with your use or possession of, or reliance on, Content in any form, including, without limitation, any claims made by a third party that your use or possession of, or reliance on, Content caused damage to such third party. To the maximum extent permitted by applicable law, you hereby release, waive and discharge Higher Tides Realty or anyone else who might be entitled to seek indemnification or contribution from Higher Tides Realty, from all Claim arising from or in any way related to your use or possession of, or reliance on, Content. You hereby covenant not to sue or to bring, file, charge, claim, sue or cause, assist, or permit to be brought, filed, charged or claimed any Claim against Higher Tides Realty whatsoever relating to your use or possession of, or reliance on, Content or activities related thereto. Higher Tides Realty shall not be liable for any claim, demand, or action, irrespective of the nature of the cause of the claim, demand, or action alleging any loss, injury or damages, direct or indirect, which may result from your use, possession or reliance on content. You understand and agree that this disclaimer is expressly intended to extend and apply to, and also covers and includes all, unknown, unforeseen, unanticipated and unsuspected risks, dangers, injuries, damages, loss and liability and the consequences thereof, as well as those now disclosed, perceived and known to exist. In addition, you understand and agree that the provisions of any state, federal, or local law or ordinance providing in substance that releases shall not extend to risks, dangers, claims, demands, injuries or damages, loss or liability, which are unknown or unsuspected to exist at the time of the giving of such releases, are hereby expressly waived, and that such waiver is an essential and material provision of this agreement. If any provision of this agreement is held to be overly broad or unenforceable as written, you agree that a court should view the provisions as separable and uphold those separable provisions deemed to be reasonable or to modify any provision so as to make it reasonable and enforceable.</p>
+        </div>
+
+
+
+        <img id="logo" src="img/logo.png" />
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+Title: Teachable Machine
+
+----
+
+Year: 2017
+
+----
+
+Text: 
+
+I led design for (link: https://teachablemachine.withgoogle.com/# text: Teachable Machine,) an AI experiment that lets anyone play with machine learning. 
+
+I wrote about designing for the weird new world where we can teach machines for the (link: https://design.google/library/designing-and-learning-teachable-machine/ text: Google Design blog.)
+
+You can also read some articles about it:
+(link: https://www.popularmechanics.com/technology/news/a28501/google-teachable-machine-learning-ai/ text: Popular Mechanics)
+(link: https://www.theverge.com/tldr/2017/10/9/16447006/google-teachable-machine-learning-ai-experiment text: The Verge)
+(link: https://www.engadget.com/2017/10/09/google-teachable-machine-learning-ai/ text: Engadget)

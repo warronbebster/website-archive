@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Higher Tides Realty</title>
+    <meta name="description" content="Climate Change Real Estate!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="author" content="Climate Change Realtors">
+    <meta name="keyword" content="Up and Coming, Global Warming, Sea Rise, Post-Global Warming, Real Estate">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+
+
+    <!--<script src="script.js"></script>-->
+
+
+
+
+
+
+    <script>
+    $(document).ready(function() {
+
+        // Click event for any anchor tag that's href starts with #
+        $('a[href^="#"]').click(function(event) {
+
+            // The id of the section we want to go to.
+            var id = $(this).attr("href");
+
+            // An offset to push the content down from the top.
+            var offset = 0;
+
+            // Our scroll target : the top position of the
+            // section that has the id referenced by our href.
+            var target = $(id).offset().top - offset;
+
+            // The magic...smooth scrollin' goodness.
+            $('html, body').animate({
+                scrollTop: target
+            }, 1000);
+
+            //prevent the page from jumping down to our section.
+            event.preventDefault();
+        });
+    });
+    </script>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+
+</head>
+
+<body>
+    <div id="bg">
+
+        <section id="title" style="max-width:100px;">
+            <a href="#bg"><img src="img/logo_plain.png" style="max-width:100%;" />
+            </a>
+        </section>
+
+        <ul id="menu">
+            <li><a href="#about_us">About&nbsp;</a>
+            </li>
+            <li><a href="#mission">Mission&nbsp;</a>
+            </li>
+            <li><a href="#services">Services</a>
+            </li>
+            <li><a href="#utility">Utility</a>
+            </li>
+        </ul>
+
+        <section id="tagline">
+            <h2>Global Warming is changing our world.</h2>
+            <h2>We're here to help you through it.</h2>
+        </section>
+
+
+        <section id="video">
+            <div class='embed-container'>
+                <iframe src='https://player.vimeo.com/video/113718585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+        </section>
+    </div>
+
+
+    <section id="about_us" class="bucket">
+        <h2>Higher Tides Realty</h2>
+        <div class="bucket_text left">
+            <p>Climate change is actively transforming our world.</p>
+            <p>By the time the next century rolls in, the sea level could be two meters higher than it is today. What does that mean for you? Well, many of the waterfronts you know and love may no longer exist. New York will need anti-flooding measures to avoid catostrophic damage, Florida could see the ocean encroach as much as 5 miles, and Venice is already suffering property loss. Beautiful beaches all over the world will be slowly encroached by rising waters, leaving culture, homes, and billions of dollars of property underwater.</p>
+            <p>Additionally, changing temperatures will affect everything from vegetation to crop viability. Swaths of cold countryside will become more fertile farmland, whereas drier areas like California will only become more arid and desertlike.</p>
+            <p>We will find you currently undesirable and overlooked property, which will grow in value while other properties become uninhabitable. What was once undesirable will become first-class property. We specialize in future waterfront property and areas with sufficient water supplies, desirable climates, and little storm activity. Get a free consultation to determine whether or not your family and home will be in danger. We begin taking public clients on January 13th. Email <a href="mailto:hello@highertidesrealty.com">hello@highertidesrealty.com</a> to start the process.</p>
+        </div>
+
+        <div class="right bucket_img">
+            <img class="bucket_img" src="img/about_us.png" />
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+
+    <section id="mission" class="bucket">
+        <h2>Our Mission</h2>
+        <div class="bucket_text right">
+            <p>What is our goal?</p>
+            <p>We want people to know what they're dealing with. We want you to get the most out of your properties, before they diminish in value. We want your home to be your home forever, not just until the next storm comes. We want to support the families of tomorrow by helping the property owners of today. We want to spread awareness about the ways climate change will affect your personal investements.</p>
+            <p>Property values are liable to fluctuate wildly in the next century. Let us help you learn what's coming, and take control of your future.</p>
+        </div>
+
+        <div class="left bucket_img">
+            <img class="bucket_img" src="img/mission.png" />
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+    <section id="services" class="bucket">
+        <h2>Our Services</h2>
+        <div class="bucket_text left">
+            <p>What can we do for you?</p>
+            <p>Property advising and consultations.</p>
+            <p>Our property utility is a free service to help property owners gauge the potential loss of property value due to rising sea levels over the next century. We hold that helping people be informed about their risk is our social responsibility.</p>
+            <p>We also provide consultation for property owners looking for post-climate change property. Real estate that will grow in value as tempuratures and sea levels rise is currently in abundance, and makes for an ideal long-term investment. For consulting rates and information, email <a href="mailto:hello@highertidesrealty.com">hello@highertidesrealty.com</a>.</p>
+        </div>
+
+        <div class="right bucket_img">
+            <img class="bucket_img" src="img/services.png" />
+        </div>
+
+        <div class="clear"></div>
+    </section>
+
+    <section id="utility" class="bucket">
+        <h2>Utility</h2>
+        <div class="bucket_text">
+            <p>Search your address to determine your climate change risk level.</p>
+        </div>
+        <div style="margin: 20px 0;">
+            <p>
+                <input name="goto" id="goto" type="text" placeholder="Search Address" maxlength="100" onkeypress="return submitenter(this,event);" spellcheck="false" onclick="this.select();">
+                <input class="custombutton" id="btn_go" name="btn_go" type="button" value="Search" onclick="javascript:ftn_quickfind2(document.getElementById('goto').value)">
+            </p>
+        </div>
+        <div id="map_canvas" style="display:none;"></div>
+
+        <div>
+            <p id="outputDiv"></p>
+        </div>
+    </section>
+
+    <section id="footer" class="bucket">
+        <h3>© Higher Tides Realty 2013</h3>
+        <p>Contact Us!</p>
+        <p><a href="https://www.facebook.com/pages/Higher-Tides-Real-Estate-Advisors/366554793504856">Facebook,</a>
+            <a href="https://twitter.com/HigherTidesRE">Twitter,</a>
+            <a href="mailto:hello@highertidesrealty.com">Email</a> </p>
+        <p><a href="info.html">Terms of Service</a>
+        </p>
+        <img id="logo" src="img/logo.png" />
+    </section>
+
+    <script src="maps-script.js"></script>
+</body>
+
+</html>

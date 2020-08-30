@@ -1,0 +1,25 @@
+Class: big
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 1
+
+----
+
+Caption: 
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 11

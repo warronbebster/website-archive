@@ -1,0 +1,2 @@
+AuthName "Higher Tides Realty"
+AuthUserFile "/home1/barronw1/.htpasswds/public_html/highertidesrealty/passwd"

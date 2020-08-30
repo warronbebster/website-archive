@@ -1,0 +1,13 @@
+Class: big
+
+----
+
+Caption: ⤷ Cover illustration by Alex Kiesling.
+
+----
+
+Sort: 1
+
+----
+
+Frontclass: big

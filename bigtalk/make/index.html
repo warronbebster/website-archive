@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Make</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="author" content="">
+    <meta name="keyword" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <script src="jquery.sticky-kit.js"></script>
+</head>
+
+<body>
+    <!--     <div id="bg">
+        <section id="tagline">
+            <h2>Big Talk.</h2>
+            <h2>Program without coding.</h2>
+        </section>
+    </div> -->
+    <div style="position:fixed;right:0; top:32px; width: calc(100vw - 500px); max-width:550px;z-index:999;">
+        <img id="frame" src="img/frame.png" style="position:relative;z-index:9999;">
+    </div>
+    <section class="bucket">
+        <div class="bucket_text left">
+            <h2>Make is personal, creative machine learning.</h2>
+            <p class="bold">Program by teaching, not by learning.</p>
+            <p>Make is a way to create live, personal creative systems on phones. We want to allow anyone to create complex, living ways to interact with technology – without the need to learn complicated syntax. </p>
+        </div>
+        <div class="right bucket_img">
+            <video loop autoplay>
+                <source src="img/intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <section class="bucket" style="box-shadow:0px 25px 25px rgba(255,255,255,.5);">
+        <div class="bucket_text left">
+            <h2>How Make works.</h2>
+            <p class="bold">Make uses <a href="http://en.wikipedia.org/wiki/Supervised_learning">supervised learning</a> to turn inputs and outputs into live systems.</p>
+            <p>Make sets of inputs and outputs by adjusting data (e.g. audio, or vector paths), and the system interpolates the ways sets of inputs can turn into those outputs. The more numerous and specific the inputs and outputs you set, the better and faster the system will learn.
+            </p>
+        </div>
+        <div class="right bucket_img">
+            <video loop autoplay>
+                <source src="img/how.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <section class="bucket" style="box-shadow:0px 25px 25px rgba(255,255,255,.5);">
+        <div class="bucket_text left">
+            <h2>How to use Make.</h2>
+            <p class="bold">Make is organized by actions, which are characterized by sets of inputs and outputs.</p>
+            <p>When you create a new function, begin by choosing what types of inputs and outputs you want. Each type of input/output has its own interface; use these to adjust the inputs and corresponding outputs that you want the system to do, and then check them as a correct set. The current list of types is:</p>
+            <ul>
+                <li>color</li>
+                <li>touch event</li>
+                <li>image</li>
+                <li>vector path</li>
+                <li>audio</li>
+                <li>number</li>
+                <li>switch</li>
+                <li>text</li>
+                <li>camera</li>
+                <li>gyroscopic</li>
+                <li>named actions</li>
+            </ul>
+            <p>
+                <br/>Once the action has a large enough set of inputs and outputs, you can begin testing the action. This consists of interacting with the action as a live system. If the outputs it gives you are right, confirm them to help it learn. If they're wrong, adjust the output until it is correct.</p>
+            <p>Eventually, the system will do what you want it to (most of the time) and you can start chaining actions to build complex systems without complicated code.</p>
+            <p>The apps' screens are organized by these interactions. From left to right: actions, sets of each action's inputs and outputs, individual input/outputs, and testing. Navigate these screens by swiping or selecting.</p>
+        </div>
+        <div class="right bucket_img" id="stick">
+            <video loop autoplay id="vid">
+                <source src="img/how_use.mp4" type="video/mp4" id="vid">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <section class="bucket">
+        <div class="bucket_text left">
+            <h2>About Make</h2>
+            <p>Make was developed by <a href="http://barronwebster.com">Barron,</a> a designer at RISD, after developing the Bigtalk platform with David Lee and Sam Song.</p>
+            <p>Make was incubated in Computer Utopias under the mentorship of Chris Novello, with support from the members of other teams; Post, Bumble, Pip,</p>
+            <p>Want to help make Make? Email <a href="mailto:hello@bigtalk.us">hello@bigtalk.us</a>.</p>
+        </div>
+        <div class="right bucket_img">
+            <video loop autoplay>
+                <source src="img/out.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <script>
+    $(document).ready(function() {
+        var video = document.getElementById("vid");
+        var frame = document.getElementById("frame");
+        $("#stick").stick_in_parent({
+            inner_scrolling: false,
+            offset_top: 95,
+            recalc_every: 10
+        }).on("sticky_kit:stick", function(e) {
+            video.play();
+            frame.style.zIndex = 999;
+        }).on("sticky_kit:unstick", function(e) {
+            video.play();
+            frame.style.zIndex = 999;
+        });
+
+        $(document.body).trigger("sticky_kit:recalc");
+    });
+    </script>
+</body>
+
+</html>

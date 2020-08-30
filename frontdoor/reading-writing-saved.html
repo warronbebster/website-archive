@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OpenType writing</title>
+    <script type="text/javascript" src="../dist/opentype.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="fontFamilyName"></h1>
+        <div id="key" contenteditable="true">s</div>
+        <button onclick="outFont.download()">Download Font</button>
+        <div id="interface"></div>
+        <div id="glyphs"></div>
+    </div>
+    <script>
+    var inFont, outFont;
+    var holdFont = [];
+
+    // Create a canvas and adds it to the document.
+    // Returns the 2d drawing context.
+    function createGlyphCanvas(glyph, size) { //draws a bunch of canvases
+
+        var canvasId, html, glyphsDiv, wrap, canvas, ctx;
+        canvasId = 'c' + glyph.index;
+        html = '<div class="wrapper" style="width:' + size + 'px"><canvas id="' + canvasId + '" width="' + size + '" height="' + size + '"></canvas><span>' + glyph.index + '</span><span>' + glyph.name + '</span><span>U ' + glyph.unicode + '</span></div>';
+        glyphsDiv = document.getElementById('glyphs');
+        wrap = document.createElement('div');
+        wrap.innerHTML = html;
+        glyphsDiv.appendChild(wrap);
+        canvas = document.getElementById(canvasId);
+        ctx = canvas.getContext('2d');
+        return ctx;
+    }
+
+    function createDivs() {
+        interface = document.getElementById('interface');
+        for (i = 0; i < holdFont.length; i++) {
+            var div = document.createElement('div');
+            div.innerHTML = holdFont[i].character;
+            div.id = holdFont[i].name;
+            div.contentEditable = true;
+            div.className = 'modals';
+            interface.appendChild(div);
+        }
+    }
+
+    function update(font, updateIndex, keyUnicode) {
+        console.log(outFont.glyphs.glyphs[updateIndex].path);
+        outFont.glyphs.glyphs[updateIndex].path = holdFont[updateIndex].path;
+        outFont.glyphs.glyphs[updateIndex].advanceWidth = holdFont[updateIndex].advanceWidth;
+        outFont.glyphs.glyphs[updateIndex].leftSideBearing = holdFont[updateIndex].leftSideBearing;
+
+
+        for (i = 1; i < holdFont.length; i++) { //check for if it's in Holdfont
+            // console.log(inFont.glyphs.glyphs[prop].path);
+            if (holdFont[i].unicode == keyUnicode) {
+                outFont.glyphs.glyphs[updateIndex].path = holdFont[i].path;
+                outFont.glyphs.glyphs[updateIndex].advanceWidth = holdFont[i].advanceWidth;
+                outFont.glyphs.glyphs[updateIndex].leftSideBearing = holdFont[i].leftSideBearing;
+                break;
+            }
+        }
+
+        console.log(outFont.glyphs.glyphs[updateIndex].path);
+
+        var glyph = outFont.glyphs.glyphs[updateIndex];
+        // var ctx = createGlyphCanvas(glyph, 150);
+        // var x = 50;
+        // var y = 120;
+        // var fontSize = 72;
+        // glyph.draw(ctx, x, y, fontSize);
+        var canvasToUpdate = document.getElementById('c' + updateIndex);
+        ctx = canvasToUpdate.getContext('2d');
+        ctx.clearRect(0, 0, 500, 500);
+        glyph.draw(ctx, 50, 120, 72);
+
+        // $("td").eq(2).css("color", "red");
+    }
+
+
+    opentype.load('../fonts/SourceSansPro-Regular.otf', function(err, font) { //this is where the font is loaded
+        if (err) { //if something tries to use the font before it's loaded
+            console.log(err);
+        }
+        inFont = font; //set global var infont to the font just loaded
+        outFont = font; //sets outfont to the same pattern;
+
+        console.log("A".charCodeAt(0)); //gets unicode
+        console.log(String.fromCharCode(65)); //gets string from unicode value
+
+        for (prop in inFont.glyphs.glyphs) { //for each glyph in the font
+            var holdMe = new Object(); //make new holder object
+            holdMe.path = inFont.glyphs.glyphs[prop].path;
+            holdMe.unicode = inFont.glyphs.glyphs[prop]['unicode'];
+            holdMe.name = inFont.glyphs.glyphs[prop]['name'];
+            holdMe.advanceWidth = inFont.glyphs.glyphs[prop]['advanceWidth'];
+            holdMe.leftSideBearing = inFont.glyphs.glyphs[prop]['leftSideBearing'];
+            holdMe.character = String.fromCharCode(inFont.glyphs.glyphs[prop]['unicode']);
+            holdFont.new = [inFont.glyphs.glyphs[prop]['unicode']];
+            holdFont[inFont.glyphs.glyphs[prop].index] = holdMe;
+
+            if (inFont.glyphs.glyphs[prop]['unicode'] === 65) {}
+        }
+        console.log(holdFont);
+
+        // var buffer = inFont.toArrayBuffer(); //some function to make buffer?
+        // console.log(buffer);
+        // outFont = opentype.parse(buffer); //I think this just parses the array buffer object
+        document.getElementById('fontFamilyName').innerHTML = outFont.names.fontFamily.en;
+
+        for (var i = 0; i < outFont.glyphs.length; i++) { //for every glyph in the font, draw a canvas
+            var glyph = outFont.glyphs.get(i);
+            var ctx = createGlyphCanvas(glyph, 150);
+            var x = 50;
+            var y = 120;
+            var fontSize = 72;
+            glyph.draw(ctx, x, y, fontSize);
+        }
+        createDivs();
+
+        document.getElementById("key").onkeypress = function() { //maybe I need to store path data at the beginning?
+            var keyCode = event.which || event.keyCode;
+            console.log(keyCode);
+            document.getElementById('glyphs').innerHTML = ""; //clear glyphs div
+            console.log(inFont.glyphs.glyphs);
+            for (i = 1; i < holdFont.length; i++) { //check for if it's in Holdfont
+                // console.log(inFont.glyphs.glyphs[prop].path);
+                if (holdFont[i].unicode == keyCode) {
+
+
+                    // Do stuff with found object. E.g. put it into an array:
+                    for (change in outFont.glyphs.glyphs) {
+                        console.log(inFont.glyphs.glyphs[prop].path);
+                        outFont.glyphs.glyphs[change].path = holdFont[i].path;
+                        // console.log(outFont.glyphs.glyphs[change].path);
+                        var glyph = outFont.glyphs.glyphs[change];
+                        var ctx = createGlyphCanvas(glyph, 150);
+                        var x = 50;
+                        var y = 120;
+                        var fontSize = 72;
+                        glyph.draw(ctx, x, y, fontSize);
+                    }
+                }
+            }
+        };
+
+
+        $('.modals').keypress(function() {
+            this.innerHTML = ''; //empty element
+            var keyCode = event.which || event.keyCode;
+            var elementIndex = $(this).index(); //number that this is
+            holdFont[elementIndex].new = keyCode; //assign this unicode to the new pairing
+            //update outfont & drawings
+            update(outFont, elementIndex, keyCode);
+
+        });
+
+        $('.modals').click(function() {
+            console.log(document.activeElement);
+        });
+    });
+
+
+
+
+
+    //download is called from the html button
+    </script>
+</body>
+
+</html>

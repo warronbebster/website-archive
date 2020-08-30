@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Frontdoor</title>
+    <script type="text/javascript" src="opentype.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="typed.js"></script>
+</head>
+
+<body>
+    <!-- top menu -->
+    <section id="headers">
+        <div class="header" id="demoType"><img class="svg" src="svg/keyboard.svg" />
+            <div id="hoverText3" class="hoverText"><span class="vert">What you could type</span></div>
+        </div>
+        <div class="header" id="cipherSee"><img class="svg" src="svg/eye.svg" />
+            <div id="hoverText2" class="hoverText"><span class="vert">What you would see</span></div>
+        </div>
+    </section>
+    <section id="cipher-interface">
+        <textarea id="input-text" contenteditable="true" spellcheck="false" class="demo"></textarea>
+        <div id="cipher">
+        </div>
+        <div class="clear"></div>
+        <div id="output-text" class="demo"></div>
+    </section>
+    <ul id="options">
+        <li id="about">
+            <img class="svg" src="svg/about.svg" />
+            <div class="lowerHalf"><span class="vert">About</span></div>
+        </li>
+        <li id="reset">
+            <img class="svg" src="svg/refresh.svg" />
+            <div class="lowerHalf"><span class="vert">Reset Cipher</span></div>
+        </li>
+        <li id="upOne">
+            <img class="svg" src="svg/upone.svg" />
+            <div class="lowerHalf"><span class="vert">Offset cipher up one character</span></div>
+        </li>
+        <li id="downOne">
+            <img class="svg" src="svg/downone.svg" />
+            <div class="lowerHalf"><span class="vert">Offset cipher down one character</span></div>
+        </li>
+        <li id="presets">
+            <img class="svg" src="svg/keyright.svg" />
+            <div class="lowerHalf"><span class="vert">Preset Ciphers</span></div>
+            <div class="preset" id="keyRight">
+                <span class="vert">One Key To The Right</span>
+            </div>
+            <div class="preset" id="reverseAlph">
+                <span class="vert">Reverse Alphabet</span>
+            </div>
+            <div class="preset" id="quickFox">
+                <span class="vert">The Quick Brown Fox</span>
+            </div>
+            <div class="preset" id="scream">
+                <span class="vert">Screaming</span>
+            </div>
+        </li>
+        <li id="random">
+            <img class="svg" src="svg/dice.svg" />
+            <div class="lowerHalf"><span class="vert">Randomize Cipher</span></div>
+        </li>
+        <li id="upload">
+            <img class="svg" src="svg/upload.svg" />
+            <div class="lowerHalf"><span class="vert">Upload a font (otf or ttf)</span></div>
+        </li>
+        <li id="download">
+            <img class="svg" src="svg/download.svg" />
+            <div class="lowerHalf"><span class="vert">Download Font (otf)</span></div>
+        </li>
+    </ul>
+    <div id="about">
+        <div id="lookCipher" class="aboutItem aboutToggle">
+            <span class="vert">Type here to adjust the cipher.</span>
+            <img class="svg aboutSvg" src="svg/arrow-curve.svg" />
+        </div>
+        <div id="aboutText" class="aboutItem aboutToggle">
+            <span class="vert">
+            Front-door.space is a concept &amp; website that lets you make fonts in which the letters you see are different than the letters you type. Font downloads only work in Google Chrome.
+            <br/>Made by <a href="http://barronwebster.com">Barron Webster.</a>
+            </span>
+            <div id="exit">
+                <img class="svg aboutSvg" src="svg/x.svg" />
+            </div>
+        </div>
+        <div id="lookDemos" class="aboutItem aboutToggle">
+            <span id="leftAlign">Type Here</span>
+            <img class="svg aboutSvg" src="svg/tall-arrow-red.svg" id="leftUp" />
+            <span id="rightAlign">To see what it looks like here</span>
+            <img class="svg aboutSvg" src="svg/tall-arrow-black.svg" id="rightUp" />
+        </div>
+        <div id="lookMenu" class="aboutItem aboutToggle">
+            <img class="svg aboutSvg" src="svg/arrow-curve-red.svg" />
+            <span>Use this menu to edit the cipher/font.</span>
+        </div>
+    </div>
+    <!--     <div class="container">
+        <div id="interface"></div>
+        <div id="glyphs"></div>
+    </div> -->
+    <!-- below are hidden elements -->
+    <input id="file" type="file" name="font" />
+    <div id="typed-strings">
+        <p>This is a website for making ciphered fonts for visual encryption.</p>
+        <p>Digital information is always potentially unsecure, or at least it feels that way now; constantly breaking news about government backdoors, hacks of company data. There's an attitude of resignation that any digital content is potentially accessible.</p>
+        <p>This tool asks, "What if text never existed digitally at all? What if it only existed visually?”</p>p
+        <p>The tradition of typewriters, printing, and writing all lead us to expect that when we press the A letter on the keyboard, the letter A will appear on the screen—but it doesn’t have to. This tool lets digital letters correspond with any visual letter. In this way, the font file itself acts as a cipher key.</p>
+        <p>This means that text would be digitally gibberish to anyone without access to the typeface, but once you have it, the digital gibberish becomes visual, readable language on your screen. You make use of digital communications without text actually existing digitally.</p>
+        <p>You could make a cipher font to send to your friends, and put text on a website that only looks like language to those who have the font installed on their system.</p>
+        <p>Give me a try! Type in the white letters on the left or options below to adjust the cipher, and type here to see what the font would look like on the right. Upload and download your own fonts below!</p>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="svginline.js"></script>
+</body>
+
+</html>

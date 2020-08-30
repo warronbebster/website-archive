@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="200px" height="200px" viewBox="0 0.001 200 200"
+	 overflow="visible" enable-background="new 0 0.001 200 200" xml:space="preserve">
+<defs>
+</defs>
+<circle fill="#FFFFFF" cx="100" cy="100" r="100"/>
+<rect x="52.089" y="141.344" fill="#FC7C9F" width="7.645" height="15.928"/>
+<rect x="137.338" y="141.344" fill="#FC7C9F" width="7.645" height="15.928"/>
+<rect x="52.089" y="141.344" opacity="0.1" fill="#231F20" width="7.645" height="5.309"/>
+<rect x="137.338" y="141.344" opacity="0.1" fill="#231F20" width="7.645" height="5.309"/>
+<polygon fill="#FC7C9F" points="26.125,54.043 26.125,134.02 32.389,141.344 164.683,141.344 170.947,134.02 170.947,54.043 "/>
+<rect x="31.433" y="58.924" fill="#D3295E" width="134.206" height="72.865"/>
+<rect x="42.688" y="125.416" fill="#5FD0D6" width="13.224" height="6.373"/>
+<rect x="42.688" y="129.559" fill="#FFFFFF" width="13.224" height="2.23"/>
+<polygon opacity="0.15" fill="#231F20" points="55.911,125.416 62.284,131.789 55.911,131.789 "/>
+<rect x="29.496" y="131.789" fill="#FFB85D" width="138.08" height="2.23"/>
+<rect x="29.496" y="134.02" opacity="0.15" fill="#231F20" width="138.08" height="2.227"/>
+<rect x="161.502" y="121.505" transform="matrix(0.9337 0.3581 -0.3581 0.9337 56.126 -49.8661)" fill="#FFFFFF" width="2.389" height="10.193"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M84.793,98.885c0,6.217-5.039,11.256-11.254,11.256
+	c-6.215,0-11.254-5.039-11.254-11.256c0-6.213,5.039-11.254,11.254-11.254C79.754,87.631,84.793,92.672,84.793,98.885z"/>
+<g>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M92.166,86.191c2.834,0,2.834,2.879,5.667,2.879
+		c2.833,0,2.833-2.879,5.665-2.879c2.835,0,2.835,2.879,5.669,2.879c2.836,0,2.836-2.879,5.673-2.879s2.837,2.879,5.673,2.879"/>
+</g>
+<g>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M98.536,94.887c2.833,0,2.833,2.879,5.667,2.879
+		c2.832,0,2.832-2.879,5.665-2.879c2.834,0,2.834,2.879,5.669,2.879c2.837,0,2.837-2.879,5.674-2.879s2.837,2.879,5.673,2.879"/>
+</g>
+</svg>

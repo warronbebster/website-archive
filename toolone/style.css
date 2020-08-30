@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*END CSS RESET*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    /*font-family: 'Freight Big Pro Book';*/
+    /*font-family: 'Freight Big Pro Medium';*/
+    
+    font-family: 'Freight Big Pro SemiBold';
+    /*font-family: 'Freight Big Pro Light'*/
+    
+    font-size: 30px;
+    background-color: rgba(255, 255, 255,1);
+    color: rgb(113, 225, 196);
+    -webkit-print-color-adjust: exact;
+}
+.hold {
+    width: 20in;
+    height: 24in;
+    overflow: hidden;
+    transition:1s;
+    -webkit-transition:1s;
+}
+.contain {
+    padding-top: 2in;
+    padding-left: 1in;
+    float: left;
+    width: 200px;
+
+}
+h1 {
+    font-size: 500px;
+    float: right;
+    position: relative;
+    top: 500px;
+    right: 200px;
+    z-index: 5;
+    /*transform: rotate(90deg);*/
+}
+h2 {
+    font-size: 250px;
+    width: 200px;
+    position: relative;
+    /*left: 200px;*/
+    
+    float: right;
+    z-index: 5;
+}
+#rotate {
+    transform: rotate(90deg);
+    position: relative;
+    top: 1400px;
+    left: 100px;
+}
+h3 {
+    font-size: 40px;
+    left: 120px;
+    white-space: nowrap;
+    padding-bottom: 20px;
+
+}
+h3 span {
+    font-size: 60px;
+    line-height: 60px;
+}
+p {
+    width: 4in;
+    font-family: 'Freight Big Pro Medium';
+
+}
+#mfPreviewBar {
+    display: none;
+}
+/*@media print {
+    body {
+        width: 20in;
+        
+        height: 24in;
+    }
+}*/

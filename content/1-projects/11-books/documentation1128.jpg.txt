@@ -1,0 +1,25 @@
+Class: big
+
+----
+
+Frontclass: 
+
+----
+
+Featured: 0
+
+----
+
+Caption: ⤷ Archive of photos taken, 2012-2016
+
+----
+
+What: 
+
+----
+
+Linkout: 
+
+----
+
+Sort: 8
